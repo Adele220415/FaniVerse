@@ -1,0 +1,64 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Reference to the calling user's own user document.
+    function selfRef() {
+      return /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    // ---------- users ----------
+    match /users/{userId} {
+
+      // Contains email, so require an authenticated reader. Needed so that
+      // content.author can be resolved to a display name when rendering.
+      allow read: if isSignedIn();
+
+      allow create: if isOwner(userId)
+        && request.resource.data.uid == userId;
+
+      // Guard against privilege escalation: a user must not be able to grant
+      // themselves a higher role or reactivate a disabled account.
+      allow update: if isOwner(userId)
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.isActive == resource.data.isActive
+        && request.resource.data.createdAt == resource.data.createdAt;
+
+      allow delete: if isOwner(userId);
+
+      // Per-user subcollections: wishlist_items, cart_items, bookmarks.
+      // The wildcard covers any subcollection under this user only.
+      match /{subcollection}/{docId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // ---------- content ----------
+    match /content/{contentId} {
+
+      allow read: if isSignedIn();
+
+      // Only an authenticated user may post, and only as themselves.
+      allow create: if isSignedIn()
+        && request.resource.data.author == selfRef();
+
+      // Authors may edit or delete their own posts, but may not reassign
+      // authorship to another user.
+      allow update: if isSignedIn()
+        && resource.data.author == selfRef()
+        && request.resource.data.author == resource.data.author;
+
+      allow delete: if isSignedIn() && resource.data.author == selfRef();
+    }
+  }
+}

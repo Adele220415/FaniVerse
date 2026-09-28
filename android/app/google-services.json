@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840269077822",
+    "project_id": "faniverse-main-753e3",
+    "storage_bucket": "faniverse-main-753e3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840269077822:android:0a866d142e94ba025f606f",
+        "android_client_info": {
+          "package_name": "com.example.faniverse_main"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg1oqlDb3UqiArJK_hsqRVuAg0chn0tmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

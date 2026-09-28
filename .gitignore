@@ -1,0 +1,184 @@
+# ============================================================================
+# SECRETS - never commit these. Listed first so they are easy to audit.
+# ============================================================================
+
+# Firebase Admin private key. Grants full admin access to the project.
+# Generate a new one in Firebase console > Project Settings > Service Accounts.
+serviceAccountKey.json
+*serviceAccountKey*.json
+*-service-account*.json
+*-firebase-adminsdk*.json
+
+# Signing keys - these let someone publish builds as you.
+*.jks
+*.keystore
+key.properties
+android/key.properties
+**/android/key.properties
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+secrets.dart
+secret.dart
+
+# Machine-specific / personal overrides
+local.properties
+.claude/
+.vscode/settings.json
+*.local
+
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-error.log*
+
+# ============================================================================
+# FLUTTER / DART
+# ============================================================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# Symbolication / obfuscation output
+app.*.symbols
+app.*.map.json
+
+# ============================================================================
+# PLATFORM BUILD ARTEFACTS
+# ============================================================================
+
+# Android
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+
+# iOS
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+/ios/Flutter/App.xcworkspace
+/ios/Flutter/ephemeral/
+/ios/Podfile.lock
+/ios/Pods/
+/ios/.symlinks/
+
+# macOS
+/ios/Flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+**/macos/**/xcuserdata/
+
+# Windows
+/windows/flutter/ephemeral/
+**/windows/flutter/ephemeral/**
+
+# Linux
+/linux/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# Generic
+**/ephemeral/
+*.log
+
+# ============================================================================
+# SEED DATA PIPELINE
+# ============================================================================
+# Generated JSON is intentionally COMMITTED so it stays diffable in review.
+# Local API cache and credentials are not.
+/seed/.env
+/seed/.cache/
+/seed/node_modules/
+/seed/*.log
+
+# ============================================================================
+# OS / EDITOR
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.migrate_workspaces/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code (keep launch/tasks, ignore local settings)
+/.vscode/*
+!/.vscode/settings.json.example
+!/.vscode/launch.json
+!/.vscode/tasks.json
+!/.vscode/extensions.json
+.vscode/launch.json.bak
+.history/
+
+# ============================================================================
+# FIREBASE
+# ============================================================================
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+pubsub-debug.log
+*-debug.log
+.runtimeconfig.json

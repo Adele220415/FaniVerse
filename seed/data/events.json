@@ -1,0 +1,1798 @@
+{
+  "evt_0001": {
+    "title": " - Director’s Cut Gutter Saints Gathering",
+    "description": "A comics gathering for Gutter Saints fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/30570292/pexels-photo-30570292.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-10-24T23:24:05.766Z",
+    "startTime": "2026-10-25T16:24:05.766Z",
+    "endTime": "2026-10-25T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0020"
+    },
+    "organizerId": "u_0020",
+    "ticketPrice": 45.54,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0001",
+    "status": "upcoming",
+    "capacity": 2357,
+    "attendeesCount": 161,
+    "createdAt": "2026-06-27T23:24:05.766Z",
+    "updatedAt": "2026-07-10T23:24:05.766Z"
+  },
+  "evt_0002": {
+    "title": "Cloudfall Sect: Cosplay Contest",
+    "description": "A donghua gathering for Cloudfall Sect fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/15267457/pexels-photo-15267457.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/16475255/pexels-photo-16475255.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/5955738/pexels-photo-5955738.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-06-18T23:24:05.766Z",
+    "startTime": "2026-06-19T11:24:05.766Z",
+    "endTime": "2026-06-19T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0011"
+    },
+    "organizerId": "u_0011",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 2964,
+    "attendeesCount": 2459,
+    "createdAt": "2026-07-09T23:24:05.766Z",
+    "updatedAt": "2026-07-13T23:24:05.766Z"
+  },
+  "evt_0003": {
+    "title": "Raid Season: Jam Session",
+    "description": "A e-sports gathering for Raid Season fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/5380620/pexels-photo-5380620.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/7915292/pexels-photo-7915292.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/28993114/pexels-photo-28993114.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-10-17T23:24:05.766Z",
+    "startTime": "2026-10-18T09:24:05.766Z",
+    "endTime": "2026-10-18T15:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0009"
+    },
+    "organizerId": "u_0009",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 260,
+    "attendeesCount": 110,
+    "createdAt": "2026-07-23T23:24:05.766Z",
+    "updatedAt": "2026-08-01T23:24:05.766Z"
+  },
+  "evt_0004": {
+    "title": "The Pro Circuit 7 Fair",
+    "description": "A e-sports gathering for Pro Circuit 7 fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/15870664/pexels-photo-15870664.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Online / Discord",
+    "eventDate": "2026-10-14T23:24:05.766Z",
+    "startTime": "2026-10-15T08:24:05.766Z",
+    "endTime": "2026-10-15T13:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0018"
+    },
+    "organizerId": "u_0018",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 2290,
+    "attendeesCount": 1271,
+    "createdAt": "2026-08-10T23:24:05.766Z",
+    "updatedAt": "2026-08-26T23:24:05.766Z"
+  },
+  "evt_0005": {
+    "title": ": Second Draft Cloudfall Sect Gathering",
+    "description": "A donghua gathering for Cloudfall Sect fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/33246822/pexels-photo-33246822.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/8844016/pexels-photo-8844016.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Ikeja City Mall",
+    "eventDate": "2026-12-03T23:24:05.766Z",
+    "startTime": "2026-12-04T09:24:05.766Z",
+    "endTime": "2026-12-04T11:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0017"
+    },
+    "organizerId": "u_0017",
+    "ticketPrice": 132.71,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0005",
+    "status": "upcoming",
+    "capacity": 1851,
+    "attendeesCount": 111,
+    "createdAt": "2026-04-08T23:24:05.766Z",
+    "updatedAt": "2026-04-21T23:24:05.766Z"
+  },
+  "evt_0006": {
+    "title": "The Crimson Ledger Expo",
+    "description": "A comics gathering for Crimson Ledger fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13407341/pexels-photo-13407341.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-12-13T23:24:05.766Z",
+    "startTime": "2026-12-14T13:24:05.766Z",
+    "endTime": "2026-12-14T15:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0032"
+    },
+    "organizerId": "u_0032",
+    "ticketPrice": 110.41,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0006",
+    "status": "upcoming",
+    "capacity": 2732,
+    "attendeesCount": 1554,
+    "createdAt": "2026-03-21T23:24:05.766Z",
+    "updatedAt": "2026-03-25T23:24:05.766Z"
+  },
+  "evt_0007": {
+    "title": "Jade Meridian: Meet & Greet",
+    "description": "A donghua gathering for Jade Meridian fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/16475255/pexels-photo-16475255.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/5955738/pexels-photo-5955738.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Port Harcourt Civic Centre",
+    "eventDate": "2026-10-30T23:24:05.766Z",
+    "startTime": "2026-10-31T14:24:05.766Z",
+    "endTime": "2026-10-31T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0048"
+    },
+    "organizerId": "u_0048",
+    "ticketPrice": 131.57,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0007",
+    "status": "upcoming",
+    "capacity": 1652,
+    "attendeesCount": 161,
+    "createdAt": "2026-07-04T23:24:05.766Z",
+    "updatedAt": "2026-07-08T23:24:05.766Z"
+  },
+  "evt_0008": {
+    "title": "Grand Finals: Relight",
+    "description": "A e-sports gathering for Grand Finals fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/30111694/pexels-photo-30111694.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-08-08T23:24:05.766Z",
+    "startTime": "2026-08-09T15:24:05.766Z",
+    "endTime": "2026-08-09T23:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0005"
+    },
+    "organizerId": "u_0005",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 519,
+    "attendeesCount": 51,
+    "createdAt": "2026-06-26T23:24:05.766Z",
+    "updatedAt": "2026-07-15T23:24:05.766Z"
+  },
+  "evt_0009": {
+    "title": "Grand Finals: Relight",
+    "description": "A e-sports gathering for Grand Finals fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7862586/pexels-photo-7862586.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/7915370/pexels-photo-7915370.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Online / Discord",
+    "eventDate": "2027-01-19T23:24:05.766Z",
+    "startTime": "2027-01-20T14:24:05.766Z",
+    "endTime": "2027-01-20T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0037"
+    },
+    "organizerId": "u_0037",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 1005,
+    "attendeesCount": 374,
+    "createdAt": "2026-04-12T23:24:05.766Z",
+    "updatedAt": "2026-04-13T23:24:05.766Z"
+  },
+  "evt_0010": {
+    "title": "Chrono Rift: Meetup",
+    "description": "A gaming gathering for Chrono Rift fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9072270/pexels-photo-9072270.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/30393929/pexels-photo-30393929.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-11-26T23:24:05.766Z",
+    "startTime": "2026-11-27T18:24:05.766Z",
+    "endTime": "2026-11-27T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0043"
+    },
+    "organizerId": "u_0043",
+    "ticketPrice": 139.72,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0010",
+    "status": "upcoming",
+    "capacity": 1704,
+    "attendeesCount": 1676,
+    "createdAt": "2026-08-08T23:24:05.766Z",
+    "updatedAt": "2026-08-13T23:24:05.766Z"
+  },
+  "evt_0011": {
+    "title": "The Astral Siege Expo",
+    "description": "A gaming gathering for Astral Siege fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/18966440/pexels-photo-18966440.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/7862512/pexels-photo-7862512.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Port Harcourt Civic Centre",
+    "eventDate": "2026-07-14T23:24:05.766Z",
+    "startTime": "2026-07-15T18:24:05.766Z",
+    "endTime": "2026-07-16T01:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0010"
+    },
+    "organizerId": "u_0010",
+    "ticketPrice": 147.35,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0011",
+    "status": "completed",
+    "capacity": 971,
+    "attendeesCount": 799,
+    "createdAt": "2026-03-24T23:24:05.766Z",
+    "updatedAt": "2026-04-11T23:24:05.766Z"
+  },
+  "evt_0012": {
+    "title": "Feral City: Interlude",
+    "description": "A comics gathering for Feral City fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/30570292/pexels-photo-30570292.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/30570315/pexels-photo-30570315.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Kigali Arena",
+    "eventDate": "2026-12-28T23:24:05.766Z",
+    "startTime": "2026-12-29T08:24:05.766Z",
+    "endTime": "2026-12-29T12:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0043"
+    },
+    "organizerId": "u_0043",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 1809,
+    "attendeesCount": 320,
+    "createdAt": "2026-07-10T23:24:05.766Z",
+    "updatedAt": "2026-07-22T23:24:05.766Z"
+  },
+  "evt_0013": {
+    "title": ": Interlude Paper Cities Gathering",
+    "description": "A movies gathering for Paper Cities fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/4205210/pexels-photo-4205210.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/35382713/pexels-photo-35382713.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Port Harcourt Civic Centre",
+    "eventDate": "2026-10-16T23:24:05.766Z",
+    "startTime": "2026-10-17T09:24:05.766Z",
+    "endTime": "2026-10-17T11:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0020"
+    },
+    "organizerId": "u_0020",
+    "ticketPrice": 10.6,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0013",
+    "status": "upcoming",
+    "capacity": 393,
+    "attendeesCount": 105,
+    "createdAt": "2026-03-13T23:24:05.766Z",
+    "updatedAt": "2026-03-15T23:24:05.766Z"
+  },
+  "evt_0014": {
+    "title": "Northern Frontier: Meet & Greet",
+    "description": "A manhua gathering for Northern Frontier fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/3106772/pexels-photo-3106772.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/29606793/pexels-photo-29606793.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhua",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2026-07-02T23:24:05.766Z",
+    "startTime": "2026-07-03T12:24:05.766Z",
+    "endTime": "2026-07-03T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0032"
+    },
+    "organizerId": "u_0032",
+    "ticketPrice": 94.46,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0014",
+    "status": "completed",
+    "capacity": 1407,
+    "attendeesCount": 1029,
+    "createdAt": "2026-07-26T23:24:05.766Z",
+    "updatedAt": "2026-07-29T23:24:05.766Z"
+  },
+  "evt_0015": {
+    "title": "Glass Hours AU",
+    "description": "A books gathering for Glass Hours fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/31793138/pexels-photo-31793138.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/34584806/pexels-photo-34584806.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/39396459/pexels-photo-39396459.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-07-25T23:24:05.766Z",
+    "startTime": "2026-07-26T11:24:05.766Z",
+    "endTime": "2026-07-26T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0006"
+    },
+    "organizerId": "u_0006",
+    "ticketPrice": 39.29,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0015",
+    "status": "cancelled",
+    "capacity": 544,
+    "attendeesCount": 501,
+    "createdAt": "2026-09-05T23:24:05.766Z",
+    "updatedAt": "2026-09-25T23:24:05.766Z"
+  },
+  "evt_0016": {
+    "title": "Silent Blade Clan: Cosplay Contest",
+    "description": "A anime gathering for Silent Blade Clan fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/29901253/pexels-photo-29901253.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/6996834/pexels-photo-6996834.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "anime",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-08-16T23:24:05.766Z",
+    "startTime": "2026-08-17T17:24:05.766Z",
+    "endTime": "2026-08-18T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0036"
+    },
+    "organizerId": "u_0036",
+    "ticketPrice": 107.2,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0016",
+    "status": "completed",
+    "capacity": 2277,
+    "attendeesCount": 1560,
+    "createdAt": "2026-04-08T23:24:05.766Z",
+    "updatedAt": "2026-04-28T23:24:05.766Z"
+  },
+  "evt_0017": {
+    "title": "The Pixel Ladder Fair",
+    "description": "A e-sports gathering for Pixel Ladder fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7915292/pexels-photo-7915292.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/28993114/pexels-photo-28993114.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-12-22T23:24:05.766Z",
+    "startTime": "2026-12-23T18:24:05.766Z",
+    "endTime": "2026-12-24T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0007"
+    },
+    "organizerId": "u_0007",
+    "ticketPrice": 14.7,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0017",
+    "status": "upcoming",
+    "capacity": 245,
+    "attendeesCount": 141,
+    "createdAt": "2026-05-01T23:24:05.766Z",
+    "updatedAt": "2026-05-09T23:24:05.766Z"
+  },
+  "evt_0018": {
+    "title": "Riftbound Legends: Screening",
+    "description": "A gaming gathering for Riftbound Legends fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/19012034/pexels-photo-19012034.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19012062/pexels-photo-19012062.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Online / Discord",
+    "eventDate": "2026-08-27T23:24:05.766Z",
+    "startTime": "2026-08-28T19:24:05.766Z",
+    "endTime": "2026-08-29T01:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0018"
+    },
+    "organizerId": "u_0018",
+    "ticketPrice": 54.67,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0018",
+    "status": "cancelled",
+    "capacity": 936,
+    "attendeesCount": 396,
+    "createdAt": "2026-07-03T23:24:05.766Z",
+    "updatedAt": "2026-07-08T23:24:05.766Z"
+  },
+  "evt_0019": {
+    "title": "The Liminal Idol Con",
+    "description": "A music gathering for Liminal Idol fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/17425777/pexels-photo-17425777.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/13137879/pexels-photo-13137879.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "music",
+    "location": "Online / Discord",
+    "eventDate": "2026-06-04T23:24:05.766Z",
+    "startTime": "2026-06-05T16:24:05.766Z",
+    "endTime": "2026-06-05T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0036"
+    },
+    "organizerId": "u_0036",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 1793,
+    "attendeesCount": 1046,
+    "createdAt": "2026-04-03T23:24:05.766Z",
+    "updatedAt": "2026-04-14T23:24:05.766Z"
+  },
+  "evt_0020": {
+    "title": "The Nine Lanterns Fair",
+    "description": "A donghua gathering for Nine Lanterns fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7610580/pexels-photo-7610580.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Port Harcourt Civic Centre",
+    "eventDate": "2026-11-22T23:24:05.766Z",
+    "startTime": "2026-11-23T18:24:05.766Z",
+    "endTime": "2026-11-23T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0049"
+    },
+    "organizerId": "u_0049",
+    "ticketPrice": 118.77,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0020",
+    "status": "upcoming",
+    "capacity": 2191,
+    "attendeesCount": 1103,
+    "createdAt": "2026-07-20T23:24:05.766Z",
+    "updatedAt": "2026-07-20T23:24:05.766Z"
+  },
+  "evt_0021": {
+    "title": "The Salt and Iron Con",
+    "description": "A movies gathering for Salt and Iron fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/11092278/pexels-photo-11092278.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Birmingham NEC",
+    "eventDate": "2026-12-22T23:24:05.766Z",
+    "startTime": "2026-12-23T13:24:05.766Z",
+    "endTime": "2026-12-23T17:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0002"
+    },
+    "organizerId": "u_0002",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 482,
+    "attendeesCount": 305,
+    "createdAt": "2026-08-01T23:24:05.766Z",
+    "updatedAt": "2026-08-16T23:24:05.766Z"
+  },
+  "evt_0022": {
+    "title": "The The Quiet Ledger Fair",
+    "description": "A books gathering for The Quiet Ledger fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/39521254/pexels-photo-39521254.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/5407277/pexels-photo-5407277.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/39615122/pexels-photo-39615122.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Victoria Island",
+    "eventDate": "2027-01-01T23:24:05.766Z",
+    "startTime": "2027-01-02T08:24:05.766Z",
+    "endTime": "2027-01-02T12:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0028"
+    },
+    "organizerId": "u_0028",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 2126,
+    "attendeesCount": 1332,
+    "createdAt": "2026-09-11T23:24:05.766Z",
+    "updatedAt": "2026-09-25T23:24:05.766Z"
+  },
+  "evt_0023": {
+    "title": "Static Bloom Vol. II",
+    "description": "A music gathering for Static Bloom fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/5389619/pexels-photo-5389619.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/32586970/pexels-photo-32586970.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19312545/pexels-photo-19312545.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "music",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-09-13T23:24:05.766Z",
+    "startTime": "2026-09-14T16:24:05.766Z",
+    "endTime": "2026-09-14T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0038"
+    },
+    "organizerId": "u_0038",
+    "ticketPrice": 39.53,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0023",
+    "status": "cancelled",
+    "capacity": 2240,
+    "attendeesCount": 1904,
+    "createdAt": "2026-06-16T23:24:05.766Z",
+    "updatedAt": "2026-06-30T23:24:05.766Z"
+  },
+  "evt_0024": {
+    "title": "The Long Winter: Meetup",
+    "description": "A movies gathering for The Long Winter fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/14777245/pexels-photo-14777245.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Online / Discord",
+    "eventDate": "2026-07-18T23:24:05.766Z",
+    "startTime": "2026-07-19T15:24:05.766Z",
+    "endTime": "2026-07-19T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0018"
+    },
+    "organizerId": "u_0018",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 2387,
+    "attendeesCount": 905,
+    "createdAt": "2026-04-22T23:24:05.766Z",
+    "updatedAt": "2026-04-24T23:24:05.766Z"
+  },
+  "evt_0025": {
+    "title": "Clerk & Sword: Cosplay Contest",
+    "description": "A manga gathering for Clerk & Sword fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/37206359/pexels-photo-37206359.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/15355297/pexels-photo-15355297.png?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-10-10T23:24:05.766Z",
+    "startTime": "2026-10-11T12:24:05.766Z",
+    "endTime": "2026-10-11T13:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0045"
+    },
+    "organizerId": "u_0045",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "ongoing",
+    "capacity": 2100,
+    "attendeesCount": 994,
+    "createdAt": "2026-04-26T23:24:05.766Z",
+    "updatedAt": "2026-05-13T23:24:05.766Z"
+  },
+  "evt_0026": {
+    "title": "Paper Cities: Meetup",
+    "description": "A movies gathering for Paper Cities fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7991130/pexels-photo-7991130.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19853619/pexels-photo-19853619.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Victoria Island",
+    "eventDate": "2026-08-13T23:24:05.766Z",
+    "startTime": "2026-08-14T14:24:05.766Z",
+    "endTime": "2026-08-14T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0035"
+    },
+    "organizerId": "u_0035",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 189,
+    "attendeesCount": 149,
+    "createdAt": "2026-08-18T23:24:05.766Z",
+    "updatedAt": "2026-08-23T23:24:05.766Z"
+  },
+  "evt_0027": {
+    "title": "The Blackout Protocol Expo",
+    "description": "A comics gathering for Blackout Protocol fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9560280/pexels-photo-9560280.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/4110344/pexels-photo-4110344.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/6654171/pexels-photo-6654171.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-06-05T23:24:05.766Z",
+    "startTime": "2026-06-06T18:24:05.766Z",
+    "endTime": "2026-06-07T02:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0037"
+    },
+    "organizerId": "u_0037",
+    "ticketPrice": 77.95,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0027",
+    "status": "cancelled",
+    "capacity": 2403,
+    "attendeesCount": 792,
+    "createdAt": "2026-06-28T23:24:05.766Z",
+    "updatedAt": "2026-06-30T23:24:05.766Z"
+  },
+  "evt_0028": {
+    "title": " AU Glass Hours Gathering",
+    "description": "A books gathering for Glass Hours fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/35080492/pexels-photo-35080492.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/4069090/pexels-photo-4069090.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Kigali Arena",
+    "eventDate": "2026-07-14T23:24:05.766Z",
+    "startTime": "2026-07-15T16:24:05.766Z",
+    "endTime": "2026-07-16T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0034"
+    },
+    "organizerId": "u_0034",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 2404,
+    "attendeesCount": 844,
+    "createdAt": "2026-06-12T23:24:05.766Z",
+    "updatedAt": "2026-06-15T23:24:05.766Z"
+  },
+  "evt_0029": {
+    "title": " AU The Ninth Contract Gathering",
+    "description": "A manhwa gathering for The Ninth Contract fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/28399440/pexels-photo-28399440.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/13137879/pexels-photo-13137879.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/15583331/pexels-photo-15583331.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-09-24T23:24:05.766Z",
+    "startTime": "2026-09-25T11:24:05.766Z",
+    "endTime": "2026-09-25T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0031"
+    },
+    "organizerId": "u_0031",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 1780,
+    "attendeesCount": 650,
+    "createdAt": "2026-06-29T23:24:05.766Z",
+    "updatedAt": "2026-07-10T23:24:05.766Z"
+  },
+  "evt_0030": {
+    "title": "The Guild of Ashes Con",
+    "description": "A manhwa gathering for Guild of Ashes fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/19797801/pexels-photo-19797801.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Victoria Island",
+    "eventDate": "2026-10-07T23:24:05.766Z",
+    "startTime": "2026-10-08T19:24:05.766Z",
+    "endTime": "2026-10-09T03:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0008"
+    },
+    "organizerId": "u_0008",
+    "ticketPrice": 131.66,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0030",
+    "status": "ongoing",
+    "capacity": 1930,
+    "attendeesCount": 1761,
+    "createdAt": "2026-04-10T23:24:05.766Z",
+    "updatedAt": "2026-04-12T23:24:05.766Z"
+  },
+  "evt_0031": {
+    "title": "The Ninth Contract: Meetup",
+    "description": "A manhwa gathering for The Ninth Contract fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/31853515/pexels-photo-31853515.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/28874286/pexels-photo-28874286.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-10-04T23:24:05.766Z",
+    "startTime": "2026-10-05T13:24:05.766Z",
+    "endTime": "2026-10-05T20:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0023"
+    },
+    "organizerId": "u_0023",
+    "ticketPrice": 102.77,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0031",
+    "status": "ongoing",
+    "capacity": 2423,
+    "attendeesCount": 902,
+    "createdAt": "2026-04-04T23:24:05.766Z",
+    "updatedAt": "2026-04-09T23:24:05.766Z"
+  },
+  "evt_0032": {
+    "title": " AU Chrono Rift Gathering",
+    "description": "A gaming gathering for Chrono Rift fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9072270/pexels-photo-9072270.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/30393929/pexels-photo-30393929.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Ikeja City Mall",
+    "eventDate": "2026-06-28T23:24:05.766Z",
+    "startTime": "2026-06-29T18:24:05.766Z",
+    "endTime": "2026-06-29T23:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0035"
+    },
+    "organizerId": "u_0035",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 2395,
+    "attendeesCount": 1718,
+    "createdAt": "2026-04-23T23:24:05.766Z",
+    "updatedAt": "2026-04-23T23:24:05.766Z"
+  },
+  "evt_0033": {
+    "title": "The Dust and Neon Con",
+    "description": "A movies gathering for Dust and Neon fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/28821625/pexels-photo-28821625.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Online / Discord",
+    "eventDate": "2026-07-18T23:24:05.766Z",
+    "startTime": "2026-07-19T09:24:05.766Z",
+    "endTime": "2026-07-19T11:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0018"
+    },
+    "organizerId": "u_0018",
+    "ticketPrice": 116.69,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0033",
+    "status": "cancelled",
+    "capacity": 1630,
+    "attendeesCount": 896,
+    "createdAt": "2026-06-09T23:24:05.766Z",
+    "updatedAt": "2026-06-12T23:24:05.766Z"
+  },
+  "evt_0034": {
+    "title": "Jade Dynasty - Director’s Cut",
+    "description": "A manhua gathering for Jade Dynasty fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/38173988/pexels-photo-38173988.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhua",
+    "location": "London ExCeL",
+    "eventDate": "2026-10-21T23:24:05.766Z",
+    "startTime": "2026-10-22T19:24:05.766Z",
+    "endTime": "2026-10-22T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0032"
+    },
+    "organizerId": "u_0032",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 2755,
+    "attendeesCount": 1911,
+    "createdAt": "2026-05-16T23:24:05.766Z",
+    "updatedAt": "2026-05-17T23:24:05.766Z"
+  },
+  "evt_0035": {
+    "title": "Ironveil Protocol: Epilogue",
+    "description": "A gaming gathering for Ironveil Protocol fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/18966439/pexels-photo-18966439.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/7915265/pexels-photo-7915265.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-07-11T23:24:05.766Z",
+    "startTime": "2026-07-12T18:24:05.766Z",
+    "endTime": "2026-07-13T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0003"
+    },
+    "organizerId": "u_0003",
+    "ticketPrice": 103.86,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0035",
+    "status": "cancelled",
+    "capacity": 975,
+    "attendeesCount": 771,
+    "createdAt": "2026-09-10T23:24:05.766Z",
+    "updatedAt": "2026-09-11T23:24:05.766Z"
+  },
+  "evt_0036": {
+    "title": "The Shirogane Family Fair",
+    "description": "A manga gathering for Shirogane Family fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/29901247/pexels-photo-29901247.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/33681741/pexels-photo-33681741.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/17800493/pexels-photo-17800493.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "London ExCeL",
+    "eventDate": "2027-01-08T23:24:05.766Z",
+    "startTime": "2027-01-09T08:24:05.766Z",
+    "endTime": "2027-01-09T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0009"
+    },
+    "organizerId": "u_0009",
+    "ticketPrice": 70.5,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0036",
+    "status": "upcoming",
+    "capacity": 1003,
+    "attendeesCount": 317,
+    "createdAt": "2026-06-15T23:24:05.766Z",
+    "updatedAt": "2026-06-27T23:24:05.766Z"
+  },
+  "evt_0037": {
+    "title": ": Afterimage Clutch Point Gathering",
+    "description": "A e-sports gathering for Clutch Point fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/30111694/pexels-photo-30111694.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19012036/pexels-photo-19012036.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Port Harcourt Civic Centre",
+    "eventDate": "2026-10-31T23:24:05.766Z",
+    "startTime": "2026-11-01T16:24:05.766Z",
+    "endTime": "2026-11-01T17:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0041"
+    },
+    "organizerId": "u_0041",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 138,
+    "attendeesCount": 10,
+    "createdAt": "2026-06-04T23:24:05.766Z",
+    "updatedAt": "2026-06-10T23:24:05.766Z"
+  },
+  "evt_0038": {
+    "title": ": Relight Sweet Tsundere Works Gathering",
+    "description": "A manga gathering for Sweet Tsundere Works fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13979564/pexels-photo-13979564.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-10-24T23:24:05.766Z",
+    "startTime": "2026-10-25T11:24:05.766Z",
+    "endTime": "2026-10-25T13:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0014"
+    },
+    "organizerId": "u_0014",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 2671,
+    "attendeesCount": 515,
+    "createdAt": "2026-06-09T23:24:05.766Z",
+    "updatedAt": "2026-06-27T23:24:05.766Z"
+  },
+  "evt_0039": {
+    "title": "The Riftbound Legends Fair",
+    "description": "A gaming gathering for Riftbound Legends fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7862611/pexels-photo-7862611.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-06-30T23:24:05.766Z",
+    "startTime": "2026-07-01T16:24:05.766Z",
+    "endTime": "2026-07-02T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0032"
+    },
+    "organizerId": "u_0032",
+    "ticketPrice": 76.57,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0039",
+    "status": "completed",
+    "capacity": 2897,
+    "attendeesCount": 627,
+    "createdAt": "2026-06-03T23:24:05.766Z",
+    "updatedAt": "2026-06-06T23:24:05.766Z"
+  },
+  "evt_0040": {
+    "title": "Chrono Rift: Meetup",
+    "description": "A gaming gathering for Chrono Rift fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/32327414/pexels-photo-32327414.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19012034/pexels-photo-19012034.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19012062/pexels-photo-19012062.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "gaming",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-12-02T23:24:05.766Z",
+    "startTime": "2026-12-03T18:24:05.766Z",
+    "endTime": "2026-12-03T23:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0012"
+    },
+    "organizerId": "u_0012",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 157,
+    "attendeesCount": 110,
+    "createdAt": "2026-07-15T23:24:05.766Z",
+    "updatedAt": "2026-07-31T23:24:05.766Z"
+  },
+  "evt_0041": {
+    "title": "The The Salt Archive Fair",
+    "description": "A books gathering for The Salt Archive fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/11197155/pexels-photo-11197155.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Ikeja City Mall",
+    "eventDate": "2026-08-06T23:24:05.766Z",
+    "startTime": "2026-08-07T14:24:05.766Z",
+    "endTime": "2026-08-07T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0004"
+    },
+    "organizerId": "u_0004",
+    "ticketPrice": 101.83,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0041",
+    "status": "cancelled",
+    "capacity": 549,
+    "attendeesCount": 68,
+    "createdAt": "2026-06-28T23:24:05.766Z",
+    "updatedAt": "2026-07-01T23:24:05.766Z"
+  },
+  "evt_0042": {
+    "title": "Starfall Boys: Jam Session",
+    "description": "A manhwa gathering for Starfall Boys fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13602781/pexels-photo-13602781.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2026-08-22T23:24:05.766Z",
+    "startTime": "2026-08-23T15:24:05.766Z",
+    "endTime": "2026-08-23T17:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0035"
+    },
+    "organizerId": "u_0035",
+    "ticketPrice": 14.91,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0042",
+    "status": "completed",
+    "capacity": 1066,
+    "attendeesCount": 1023,
+    "createdAt": "2026-06-02T23:24:05.766Z",
+    "updatedAt": "2026-06-18T23:24:05.766Z"
+  },
+  "evt_0043": {
+    "title": "Iron Crane Chronicles: Cosplay Contest",
+    "description": "A donghua gathering for Iron Crane Chronicles fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/19071360/pexels-photo-19071360.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/15168454/pexels-photo-15168454.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Online / Discord",
+    "eventDate": "2027-01-12T23:24:05.766Z",
+    "startTime": "2027-01-13T16:24:05.766Z",
+    "endTime": "2027-01-13T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0017"
+    },
+    "organizerId": "u_0017",
+    "ticketPrice": 34.12,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0043",
+    "status": "upcoming",
+    "capacity": 1000,
+    "attendeesCount": 374,
+    "createdAt": "2026-03-20T23:24:05.766Z",
+    "updatedAt": "2026-04-07T23:24:05.766Z"
+  },
+  "evt_0044": {
+    "title": ": Epilogue Meridian Road Gathering",
+    "description": "A books gathering for Meridian Road fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/39396459/pexels-photo-39396459.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/34708275/pexels-photo-34708275.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Kigali Arena",
+    "eventDate": "2026-07-06T23:24:05.766Z",
+    "startTime": "2026-07-07T16:24:05.766Z",
+    "endTime": "2026-07-07T23:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0040"
+    },
+    "organizerId": "u_0040",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 2420,
+    "attendeesCount": 2350,
+    "createdAt": "2026-05-04T23:24:05.766Z",
+    "updatedAt": "2026-05-08T23:24:05.766Z"
+  },
+  "evt_0045": {
+    "title": "Nine Lanterns - Side B",
+    "description": "A donghua gathering for Nine Lanterns fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/5709691/pexels-photo-5709691.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/37605548/pexels-photo-37605548.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Victoria Island",
+    "eventDate": "2026-06-25T23:24:05.766Z",
+    "startTime": "2026-06-26T14:24:05.766Z",
+    "endTime": "2026-06-26T15:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0042"
+    },
+    "organizerId": "u_0042",
+    "ticketPrice": 77.89,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0045",
+    "status": "cancelled",
+    "capacity": 1434,
+    "attendeesCount": 899,
+    "createdAt": "2026-04-20T23:24:05.766Z",
+    "updatedAt": "2026-04-20T23:24:05.766Z"
+  },
+  "evt_0046": {
+    "title": "The Dust and Neon Expo",
+    "description": "A movies gathering for Dust and Neon fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/18267072/pexels-photo-18267072.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/11092278/pexels-photo-11092278.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-06-03T23:24:05.766Z",
+    "startTime": "2026-06-04T19:24:05.766Z",
+    "endTime": "2026-06-05T03:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0004"
+    },
+    "organizerId": "u_0004",
+    "ticketPrice": 42.76,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0046",
+    "status": "completed",
+    "capacity": 2998,
+    "attendeesCount": 229,
+    "createdAt": "2026-05-01T23:24:05.766Z",
+    "updatedAt": "2026-05-09T23:24:05.766Z"
+  },
+  "evt_0047": {
+    "title": "Paper Lantern Panic - Side B",
+    "description": "A manga gathering for Paper Lantern Panic fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7768663/pexels-photo-7768663.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/38255422/pexels-photo-38255422.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/13979564/pexels-photo-13979564.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-09-25T23:24:05.766Z",
+    "startTime": "2026-09-26T14:24:05.766Z",
+    "endTime": "2026-09-26T18:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0003"
+    },
+    "organizerId": "u_0003",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 1785,
+    "attendeesCount": 810,
+    "createdAt": "2026-05-14T23:24:05.766Z",
+    "updatedAt": "2026-05-22T23:24:05.766Z"
+  },
+  "evt_0048": {
+    "title": "The Azure Step Expo",
+    "description": "A donghua gathering for Azure Step fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/38808500/pexels-photo-38808500.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/7610569/pexels-photo-7610569.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-08-18T23:24:05.766Z",
+    "startTime": "2026-08-19T19:24:05.766Z",
+    "endTime": "2026-08-20T01:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0023"
+    },
+    "organizerId": "u_0023",
+    "ticketPrice": 27.9,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0048",
+    "status": "completed",
+    "capacity": 980,
+    "attendeesCount": 338,
+    "createdAt": "2026-06-03T23:24:05.766Z",
+    "updatedAt": "2026-06-18T23:24:05.766Z"
+  },
+  "evt_0049": {
+    "title": "The Cloudfall Sect Fest",
+    "description": "A donghua gathering for Cloudfall Sect fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9016474/pexels-photo-9016474.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/9016231/pexels-photo-9016231.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2027-01-13T23:24:05.766Z",
+    "startTime": "2027-01-14T16:24:05.766Z",
+    "endTime": "2027-01-15T00:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0023"
+    },
+    "organizerId": "u_0023",
+    "ticketPrice": 48.8,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0049",
+    "status": "upcoming",
+    "capacity": 2181,
+    "attendeesCount": 1109,
+    "createdAt": "2026-07-01T23:24:05.766Z",
+    "updatedAt": "2026-07-08T23:24:05.766Z"
+  },
+  "evt_0050": {
+    "title": "The Feral City Con",
+    "description": "A comics gathering for Feral City fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/6654171/pexels-photo-6654171.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "London ExCeL",
+    "eventDate": "2026-11-10T23:24:05.766Z",
+    "startTime": "2026-11-11T16:24:05.766Z",
+    "endTime": "2026-11-11T20:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0044"
+    },
+    "organizerId": "u_0044",
+    "ticketPrice": 28.08,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0050",
+    "status": "upcoming",
+    "capacity": 1669,
+    "attendeesCount": 1548,
+    "createdAt": "2026-07-11T23:24:05.766Z",
+    "updatedAt": "2026-07-21T23:24:05.766Z"
+  },
+  "evt_0051": {
+    "title": ": Interlude Iron Crane Chronicles Gathering",
+    "description": "A donghua gathering for Iron Crane Chronicles fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9016801/pexels-photo-9016801.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "London ExCeL",
+    "eventDate": "2026-11-11T23:24:05.766Z",
+    "startTime": "2026-11-12T14:24:05.766Z",
+    "endTime": "2026-11-12T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0008"
+    },
+    "organizerId": "u_0008",
+    "ticketPrice": 146.3,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0051",
+    "status": "upcoming",
+    "capacity": 1849,
+    "attendeesCount": 406,
+    "createdAt": "2026-08-23T23:24:05.766Z",
+    "updatedAt": "2026-08-26T23:24:05.766Z"
+  },
+  "evt_0052": {
+    "title": "Raid Season: Workshop",
+    "description": "A e-sports gathering for Raid Season fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7862611/pexels-photo-7862611.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2026-09-18T23:24:05.766Z",
+    "startTime": "2026-09-19T13:24:05.766Z",
+    "endTime": "2026-09-19T14:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0004"
+    },
+    "organizerId": "u_0004",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 126,
+    "attendeesCount": 73,
+    "createdAt": "2026-05-28T23:24:05.766Z",
+    "updatedAt": "2026-06-17T23:24:05.766Z"
+  },
+  "evt_0053": {
+    "title": "The Starfall Boys Con",
+    "description": "A manhwa gathering for Starfall Boys fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/35593189/pexels-photo-35593189.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/16118362/pexels-photo-16118362.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Ikeja City Mall",
+    "eventDate": "2027-01-20T23:24:05.766Z",
+    "startTime": "2027-01-21T09:24:05.766Z",
+    "endTime": "2027-01-21T12:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0020"
+    },
+    "organizerId": "u_0020",
+    "ticketPrice": 92.47,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0053",
+    "status": "upcoming",
+    "capacity": 2321,
+    "attendeesCount": 948,
+    "createdAt": "2026-05-10T23:24:05.766Z",
+    "updatedAt": "2026-05-30T23:24:05.766Z"
+  },
+  "evt_0054": {
+    "title": "The Hollow Moon Sect Expo",
+    "description": "A anime gathering for Hollow Moon Sect fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/32700050/pexels-photo-32700050.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/34479020/pexels-photo-34479020.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/31121727/pexels-photo-31121727.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "anime",
+    "location": "Online / Discord",
+    "eventDate": "2026-09-15T23:24:05.766Z",
+    "startTime": "2026-09-16T16:24:05.766Z",
+    "endTime": "2026-09-16T19:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0011"
+    },
+    "organizerId": "u_0011",
+    "ticketPrice": 118.13,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0054",
+    "status": "cancelled",
+    "capacity": 1357,
+    "attendeesCount": 336,
+    "createdAt": "2026-03-25T23:24:05.766Z",
+    "updatedAt": "2026-04-13T23:24:05.766Z"
+  },
+  "evt_0055": {
+    "title": "Gutter Saints: Workshop",
+    "description": "A comics gathering for Gutter Saints fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13407341/pexels-photo-13407341.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/17491571/pexels-photo-17491571.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2026-09-10T23:24:05.766Z",
+    "startTime": "2026-09-11T15:24:05.766Z",
+    "endTime": "2026-09-11T20:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0049"
+    },
+    "organizerId": "u_0049",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 195,
+    "attendeesCount": 141,
+    "createdAt": "2026-07-30T23:24:05.766Z",
+    "updatedAt": "2026-08-19T23:24:05.766Z"
+  },
+  "evt_0056": {
+    "title": "The Salt and Iron Expo",
+    "description": "A movies gathering for Salt and Iron fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/36357715/pexels-photo-36357715.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "movies",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-08-08T23:24:05.766Z",
+    "startTime": "2026-08-09T12:24:05.766Z",
+    "endTime": "2026-08-09T19:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0050"
+    },
+    "organizerId": "u_0050",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 643,
+    "attendeesCount": 172,
+    "createdAt": "2026-07-08T23:24:05.766Z",
+    "updatedAt": "2026-07-09T23:24:05.766Z"
+  },
+  "evt_0057": {
+    "title": "The Iron Crane Chronicles Fair",
+    "description": "A donghua gathering for Iron Crane Chronicles fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/7610580/pexels-photo-7610580.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/19071360/pexels-photo-19071360.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "donghua",
+    "location": "Kigali Arena",
+    "eventDate": "2026-07-20T23:24:05.766Z",
+    "startTime": "2026-07-21T13:24:05.766Z",
+    "endTime": "2026-07-21T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0048"
+    },
+    "organizerId": "u_0048",
+    "ticketPrice": 45.38,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0057",
+    "status": "completed",
+    "capacity": 2005,
+    "attendeesCount": 1606,
+    "createdAt": "2026-04-18T23:24:05.766Z",
+    "updatedAt": "2026-04-29T23:24:05.766Z"
+  },
+  "evt_0058": {
+    "title": "Neon Chronicle: Workshop",
+    "description": "A manhwa gathering for Neon Chronicle fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/16118362/pexels-photo-16118362.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/3379264/pexels-photo-3379264.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/22857359/pexels-photo-22857359.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "Nairobi KICC",
+    "eventDate": "2026-12-20T23:24:05.766Z",
+    "startTime": "2026-12-21T08:24:05.766Z",
+    "endTime": "2026-12-21T14:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0026"
+    },
+    "organizerId": "u_0026",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 2159,
+    "attendeesCount": 358,
+    "createdAt": "2026-05-02T23:24:05.766Z",
+    "updatedAt": "2026-05-14T23:24:05.766Z"
+  },
+  "evt_0059": {
+    "title": ": Afterimage Crimson Seal Gathering",
+    "description": "A manhua gathering for Crimson Seal fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/16013039/pexels-photo-16013039.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/2564465/pexels-photo-2564465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhua",
+    "location": "London ExCeL",
+    "eventDate": "2026-06-19T23:24:05.766Z",
+    "startTime": "2026-06-20T15:24:05.766Z",
+    "endTime": "2026-06-20T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0007"
+    },
+    "organizerId": "u_0007",
+    "ticketPrice": 40.85,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0059",
+    "status": "completed",
+    "capacity": 2182,
+    "attendeesCount": 669,
+    "createdAt": "2026-09-15T23:24:05.766Z",
+    "updatedAt": "2026-09-27T23:24:05.766Z"
+  },
+  "evt_0060": {
+    "title": " (Uncut) Halo Hearts Gathering",
+    "description": "A music gathering for Halo Hearts fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13399710/pexels-photo-13399710.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/3379264/pexels-photo-3379264.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/16844500/pexels-photo-16844500.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "music",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-11-18T23:24:05.766Z",
+    "startTime": "2026-11-19T17:24:05.766Z",
+    "endTime": "2026-11-19T19:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0026"
+    },
+    "organizerId": "u_0026",
+    "ticketPrice": 11.99,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0060",
+    "status": "upcoming",
+    "capacity": 1788,
+    "attendeesCount": 1651,
+    "createdAt": "2026-06-08T23:24:05.766Z",
+    "updatedAt": "2026-06-09T23:24:05.766Z"
+  },
+  "evt_0061": {
+    "title": "Feral City: Cosplay Contest",
+    "description": "A comics gathering for Feral City fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9560280/pexels-photo-9560280.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Birmingham NEC",
+    "eventDate": "2026-12-07T23:24:05.766Z",
+    "startTime": "2026-12-08T14:24:05.766Z",
+    "endTime": "2026-12-08T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0020"
+    },
+    "organizerId": "u_0020",
+    "ticketPrice": 103.74,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0061",
+    "status": "upcoming",
+    "capacity": 1244,
+    "attendeesCount": 13,
+    "createdAt": "2026-08-04T23:24:05.766Z",
+    "updatedAt": "2026-08-20T23:24:05.766Z"
+  },
+  "evt_0062": {
+    "title": ": Epilogue Glass Hours Gathering",
+    "description": "A books gathering for Glass Hours fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/39521254/pexels-photo-39521254.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Abuja National Mosque",
+    "eventDate": "2026-06-08T23:24:05.766Z",
+    "startTime": "2026-06-09T08:24:05.766Z",
+    "endTime": "2026-06-09T10:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0008"
+    },
+    "organizerId": "u_0008",
+    "ticketPrice": 31.56,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0062",
+    "status": "completed",
+    "capacity": 1232,
+    "attendeesCount": 276,
+    "createdAt": "2026-04-24T23:24:05.766Z",
+    "updatedAt": "2026-05-11T23:24:05.766Z"
+  },
+  "evt_0063": {
+    "title": "The Imperial Ledger Expo",
+    "description": "A manhua gathering for Imperial Ledger fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/6900885/pexels-photo-6900885.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/37609202/pexels-photo-37609202.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/29763174/pexels-photo-29763174.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhua",
+    "location": "Online / Discord",
+    "eventDate": "2027-01-07T23:24:05.766Z",
+    "startTime": "2027-01-08T13:24:05.766Z",
+    "endTime": "2027-01-08T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0011"
+    },
+    "organizerId": "u_0011",
+    "ticketPrice": 63.46,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0063",
+    "status": "upcoming",
+    "capacity": 1026,
+    "attendeesCount": 112,
+    "createdAt": "2026-07-26T23:24:05.766Z",
+    "updatedAt": "2026-08-13T23:24:05.766Z"
+  },
+  "evt_0064": {
+    "title": "Inkheart Requiem: Second Draft",
+    "description": "A comics gathering for Inkheart Requiem fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/8342187/pexels-photo-8342187.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/12809717/pexels-photo-12809717.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/13407341/pexels-photo-13407341.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Kigali Arena",
+    "eventDate": "2026-12-30T23:24:05.766Z",
+    "startTime": "2026-12-31T08:24:05.766Z",
+    "endTime": "2026-12-31T14:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0003"
+    },
+    "organizerId": "u_0003",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "upcoming",
+    "capacity": 1538,
+    "attendeesCount": 65,
+    "createdAt": "2026-07-08T23:24:05.766Z",
+    "updatedAt": "2026-07-18T23:24:05.766Z"
+  },
+  "evt_0065": {
+    "title": "Feral City (Uncut)",
+    "description": "A comics gathering for Feral City fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/4841965/pexels-photo-4841965.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/39609475/pexels-photo-39609475.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/9560280/pexels-photo-9560280.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Accra International Conference Centre",
+    "eventDate": "2026-07-13T23:24:05.766Z",
+    "startTime": "2026-07-14T09:24:05.766Z",
+    "endTime": "2026-07-14T11:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0036"
+    },
+    "organizerId": "u_0036",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "completed",
+    "capacity": 975,
+    "attendeesCount": 427,
+    "createdAt": "2026-03-24T23:24:05.766Z",
+    "updatedAt": "2026-04-06T23:24:05.766Z"
+  },
+  "evt_0066": {
+    "title": "Clerk & Sword: Cosplay Contest",
+    "description": "A manga gathering for Clerk & Sword fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/17800201/pexels-photo-17800201.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/31089965/pexels-photo-31089965.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/29081304/pexels-photo-29081304.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "Kigali Arena",
+    "eventDate": "2026-12-12T23:24:05.766Z",
+    "startTime": "2026-12-13T18:24:05.766Z",
+    "endTime": "2026-12-13T20:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0014"
+    },
+    "organizerId": "u_0014",
+    "ticketPrice": 132.26,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0066",
+    "status": "upcoming",
+    "capacity": 2735,
+    "attendeesCount": 2445,
+    "createdAt": "2026-07-16T23:24:05.766Z",
+    "updatedAt": "2026-07-19T23:24:05.766Z"
+  },
+  "evt_0067": {
+    "title": "The Grand Finals Con",
+    "description": "A e-sports gathering for Grand Finals fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/9072380/pexels-photo-9072380.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/18966484/pexels-photo-18966484.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "e-sports",
+    "location": "Birmingham NEC",
+    "eventDate": "2026-07-08T23:24:05.766Z",
+    "startTime": "2026-07-09T09:24:05.766Z",
+    "endTime": "2026-07-09T10:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0033"
+    },
+    "organizerId": "u_0033",
+    "ticketPrice": 23.76,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0067",
+    "status": "cancelled",
+    "capacity": 1442,
+    "attendeesCount": 1421,
+    "createdAt": "2026-04-18T23:24:05.766Z",
+    "updatedAt": "2026-04-26T23:24:05.766Z"
+  },
+  "evt_0068": {
+    "title": "The Shirogane Family Con",
+    "description": "A manga gathering for Shirogane Family fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/32763799/pexels-photo-32763799.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manga",
+    "location": "Birmingham NEC",
+    "eventDate": "2026-11-27T23:24:05.766Z",
+    "startTime": "2026-11-28T13:24:05.766Z",
+    "endTime": "2026-11-28T21:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0031"
+    },
+    "organizerId": "u_0031",
+    "ticketPrice": 113.41,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0068",
+    "status": "upcoming",
+    "capacity": 2683,
+    "attendeesCount": 1802,
+    "createdAt": "2026-08-08T23:24:05.766Z",
+    "updatedAt": "2026-08-18T23:24:05.766Z"
+  },
+  "evt_0069": {
+    "title": "Crimson Seal: Interlude",
+    "description": "A manhua gathering for Crimson Seal fans. Cosplay encouraged.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/2564465/pexels-photo-2564465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhua",
+    "location": "Kigali Arena",
+    "eventDate": "2026-12-18T23:24:05.766Z",
+    "startTime": "2026-12-19T15:24:05.766Z",
+    "endTime": "2026-12-19T19:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0017"
+    },
+    "organizerId": "u_0017",
+    "ticketPrice": 33.67,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0069",
+    "status": "upcoming",
+    "capacity": 1871,
+    "attendeesCount": 1473,
+    "createdAt": "2026-05-12T23:24:05.766Z",
+    "updatedAt": "2026-05-25T23:24:05.766Z"
+  },
+  "evt_0070": {
+    "title": "The Meridian Road Fest",
+    "description": "A books gathering for Meridian Road fans. All ages welcome.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/14152831/pexels-photo-14152831.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-10-23T23:24:05.766Z",
+    "startTime": "2026-10-24T18:24:05.766Z",
+    "endTime": "2026-10-24T19:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0014"
+    },
+    "organizerId": "u_0014",
+    "ticketPrice": 59.27,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0070",
+    "status": "upcoming",
+    "capacity": 137,
+    "attendeesCount": 89,
+    "createdAt": "2026-06-01T23:24:05.766Z",
+    "updatedAt": "2026-06-11T23:24:05.766Z"
+  },
+  "evt_0071": {
+    "title": "The Inkheart Requiem Con",
+    "description": "A comics gathering for Inkheart Requiem fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/6807234/pexels-photo-6807234.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/24905831/pexels-photo-24905831.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/34447374/pexels-photo-34447374.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Ikeja City Mall",
+    "eventDate": "2026-06-05T23:24:05.766Z",
+    "startTime": "2026-06-06T18:24:05.766Z",
+    "endTime": "2026-06-07T01:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0048"
+    },
+    "organizerId": "u_0048",
+    "ticketPrice": 49.13,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0071",
+    "status": "cancelled",
+    "capacity": 1802,
+    "attendeesCount": 1083,
+    "createdAt": "2026-03-17T23:24:05.766Z",
+    "updatedAt": "2026-03-22T23:24:05.766Z"
+  },
+  "evt_0072": {
+    "title": "The Glass Hours Con",
+    "description": "A books gathering for Glass Hours fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/4069090/pexels-photo-4069090.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/31793138/pexels-photo-31793138.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "books",
+    "location": "Lagos Convention Centre",
+    "eventDate": "2026-10-07T23:24:05.766Z",
+    "startTime": "2026-10-08T17:24:05.766Z",
+    "endTime": "2026-10-08T22:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0033"
+    },
+    "organizerId": "u_0033",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "ongoing",
+    "capacity": 935,
+    "attendeesCount": 345,
+    "createdAt": "2026-09-02T23:24:05.766Z",
+    "updatedAt": "2026-09-21T23:24:05.766Z"
+  },
+  "evt_0073": {
+    "title": " - Side B Iron Orchid Knights Gathering",
+    "description": "A anime gathering for Iron Orchid Knights fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/34426173/pexels-photo-34426173.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/13783172/pexels-photo-13783172.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/31471223/pexels-photo-31471223.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "anime",
+    "location": "Lagos Island Arts Space",
+    "eventDate": "2026-10-15T23:24:05.766Z",
+    "startTime": "2026-10-16T15:24:05.766Z",
+    "endTime": "2026-10-16T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0035"
+    },
+    "organizerId": "u_0035",
+    "ticketPrice": 57.68,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0073",
+    "status": "upcoming",
+    "capacity": 2715,
+    "attendeesCount": 2097,
+    "createdAt": "2026-06-11T23:24:05.766Z",
+    "updatedAt": "2026-06-28T23:24:05.766Z"
+  },
+  "evt_0074": {
+    "title": "Guild of Ashes: Second Draft",
+    "description": "A manhwa gathering for Guild of Ashes fans. Limited seats.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/13230724/pexels-photo-13230724.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400",
+      "https://images.pexels.com/photos/31986594/pexels-photo-31986594.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "manhwa",
+    "location": "London ExCeL",
+    "eventDate": "2026-10-08T23:24:05.766Z",
+    "startTime": "2026-10-09T19:24:05.766Z",
+    "endTime": "2026-10-09T23:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0012"
+    },
+    "organizerId": "u_0012",
+    "ticketPrice": 149.09,
+    "ticketUrl": "https://tickets.faniverse.app/e/evt_0074",
+    "status": "ongoing",
+    "capacity": 877,
+    "attendeesCount": 403,
+    "createdAt": "2026-03-21T23:24:05.766Z",
+    "updatedAt": "2026-04-03T23:24:05.766Z"
+  },
+  "evt_0075": {
+    "title": " Vol. II Gutter Saints Gathering",
+    "description": "A comics gathering for Gutter Saints fans. Doors open early.",
+    "imageUrl": [
+      "https://images.pexels.com/photos/8342187/pexels-photo-8342187.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=400"
+    ],
+    "category": "comics",
+    "location": "Online / Discord",
+    "eventDate": "2026-08-04T23:24:05.766Z",
+    "startTime": "2026-08-05T08:24:05.766Z",
+    "endTime": "2026-08-05T16:24:05.766Z",
+    "organizer": {
+      "__ref__": "users/u_0039"
+    },
+    "organizerId": "u_0039",
+    "ticketPrice": 0,
+    "ticketUrl": null,
+    "status": "cancelled",
+    "capacity": 449,
+    "attendeesCount": 85,
+    "createdAt": "2026-05-02T23:24:05.766Z",
+    "updatedAt": "2026-05-14T23:24:05.766Z"
+  }
+}
