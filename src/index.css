@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --color-bg: var(--app-bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-violet: #7C5CFF;
+  --color-violet-dim: #5a3fd4;
+  --color-coral: #FF6B5C;
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+:root,
+:root[data-theme='dark'] {
+  --app-bg-deep: #0a0a0c;
+  --app-bg: #121214;
+  --surface: #1c1c20;
+  --surface-2: #252529;
+  --border: #2e2e38;
+  --border-strong: #3a3a44;
+  --border-3: #4a4a57;
+  --text: #f0f0f5;
+  --text-2: #d8d8e0;
+  --muted: #8888a0;
+  --muted-2: #a0a0b8;
+  --muted-3: #5c5c72;
+}
+
+:root[data-theme='dim'] {
+  --app-bg-deep: #101820;
+  --app-bg: #15202b;
+  --surface: #192734;
+  --surface-2: #22303c;
+  --border: #38444d;
+  --border-strong: #46545f;
+  --border-3: #55636e;
+  --text: #f7f9f9;
+  --text-2: #cfdae0;
+  --muted: #8b98a5;
+  --muted-2: #a4b3bf;
+  --muted-3: #66757f;
+}
+
+:root[data-theme='lightsout'] {
+  --app-bg-deep: #000000;
+  --app-bg: #000000;
+  --surface: #0a0a0c;
+  --surface-2: #16161a;
+  --border: #232329;
+  --border-strong: #2e2e36;
+  --border-3: #3d3d47;
+  --text: #f0f0f5;
+  --text-2: #d8d8e0;
+  --muted: #8383a0;
+  --muted-2: #9a9ab0;
+  --muted-3: #55556b;
+}
+
+:root[data-theme='light'] {
+  --app-bg-deep: #e8e8ee;
+  --app-bg: #ffffff;
+  --surface: #f7f7fa;
+  --surface-2: #eeeef3;
+  --border: #e4e4ec;
+  --border-strong: #d3d3dd;
+  --border-3: #bcbcc8;
+  --text: #0f1419;
+  --text-2: #3d4553;
+  --muted: #5c6472;
+  --muted-2: #4a5261;
+  --muted-3: #7a8290;
+}
+
+[stroke='var(--app-bg)'] {
+  stroke: var(--app-bg);
+}
+[fill='var(--app-bg)'] {
+  fill: var(--app-bg);
+}
+[color='var(--app-bg)'] {
+  color: var(--app-bg);
+}
+[stroke='var(--surface)'] {
+  stroke: var(--surface);
+}
+[fill='var(--surface)'] {
+  fill: var(--surface);
+}
+[color='var(--surface)'] {
+  color: var(--surface);
+}
+[stroke='var(--surface-2)'] {
+  stroke: var(--surface-2);
+}
+[fill='var(--surface-2)'] {
+  fill: var(--surface-2);
+}
+[color='var(--surface-2)'] {
+  color: var(--surface-2);
+}
+[stroke='var(--border)'] {
+  stroke: var(--border);
+}
+[fill='var(--border)'] {
+  fill: var(--border);
+}
+[color='var(--border)'] {
+  color: var(--border);
+}
+[stroke='var(--border-strong)'] {
+  stroke: var(--border-strong);
+}
+[fill='var(--border-strong)'] {
+  fill: var(--border-strong);
+}
+[color='var(--border-strong)'] {
+  color: var(--border-strong);
+}
+[stroke='var(--border-3)'] {
+  stroke: var(--border-3);
+}
+[fill='var(--border-3)'] {
+  fill: var(--border-3);
+}
+[color='var(--border-3)'] {
+  color: var(--border-3);
+}
+[stroke='var(--text)'] {
+  stroke: var(--text);
+}
+[fill='var(--text)'] {
+  fill: var(--text);
+}
+[color='var(--text)'] {
+  color: var(--text);
+}
+[stroke='var(--text-2)'] {
+  stroke: var(--text-2);
+}
+[fill='var(--text-2)'] {
+  fill: var(--text-2);
+}
+[color='var(--text-2)'] {
+  color: var(--text-2);
+}
+[stroke='var(--muted)'] {
+  stroke: var(--muted);
+}
+[fill='var(--muted)'] {
+  fill: var(--muted);
+}
+[color='var(--muted)'] {
+  color: var(--muted);
+}
+[stroke='var(--muted-2)'] {
+  stroke: var(--muted-2);
+}
+[fill='var(--muted-2)'] {
+  fill: var(--muted-2);
+}
+[color='var(--muted-2)'] {
+  color: var(--muted-2);
+}
+[stroke='var(--muted-3)'] {
+  stroke: var(--muted-3);
+}
+[fill='var(--muted-3)'] {
+  fill: var(--muted-3);
+}
+[color='var(--muted-3)'] {
+  color: var(--muted-3);
+}
+
+:root[data-wallpaper] [style*='position: sticky'] {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--app-bg-deep);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  min-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(64px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes trackSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card-slide {
+  opacity: 0;
+  animation: cardSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.track-slide {
+  animation: trackSlideIn 0.4s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+@keyframes reelHeart {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  45% {
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.reel-heart {
+  animation: reelHeart 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes reelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reel-spin {
+  animation: reelSpin 4s linear infinite;
+}
+
+@keyframes reelMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reel-marquee {
+  animation: reelMarquee 9s linear infinite;
+}
+
+@keyframes reelProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.reel-progress {
+  animation: reelProgress 14s linear infinite;
+}
+
+@keyframes drawerFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sheetIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sheet-in {
+  animation: sheetIn 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes drawerSlide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-backdrop {
+  animation: drawerFade 0.22s ease both;
+}
+
+.drawer-panel {
+  animation: drawerSlide 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
