@@ -18,14 +18,26 @@ const db = getFirestore(initializeApp({
 
 const ok = (c, m) => console.log(`  ${c ? 'PASS' : 'FAIL'}  ${m}`);
 
+// Expected counts come from the generated JSON, not hardcoded literals, so
+// this stays correct when the generator changes.
+const expected = (f) => Object.keys(JSON.parse(readFileSync(join(__dirname, 'data', f), 'utf8'))).length;
+const EXPECT = {
+  users: expected('users.json'),
+  content: expected('content.json'),
+  products: expected('products.json'),
+  events: expected('events.json'),
+  communities: expected('communities.json'),
+};
+
 console.log('=== collections ===');
 const cols = await db.listCollections();
-ok(cols.length === 2, `exactly users + content (got: ${cols.map((c) => c.id).join(', ') || 'none'})`);
+ok(cols.length === 5, `5 collections: users, content, products, events, communities (got: ${cols.map((c) => c.id).join(', ') || 'none'})`);
 
 const users = await db.collection('users').get();
 const content = await db.collection('content').get();
-ok(users.size === 50, `50 users (got ${users.size})`);
-ok(content.size === 328, `328 content (got ${content.size})`);
+// Real accounts live in `users` alongside seed data, so allow extras there.
+ok(users.size >= EXPECT.users, `${EXPECT.users} seed users present (live total ${users.size}, includes real accounts)`);
+ok(content.size === EXPECT.content, `${EXPECT.content} content docs (got ${content.size})`);
 
 console.log('\n=== user document shape ===');
 const USER_FIELDS = ['uid','name','email','username','profileImage','bio','categories','role','isActive','createdAt','updatedAt','lastLoginAt'];
@@ -59,18 +71,26 @@ const nullMedia = content.docs.filter((d) => [...d.get('imageUrl'), ...d.get('vi
 ok(nullMedia.length === 0, `no nulls inside media arrays (${nullMedia.length} bad)`);
 
 console.log('\n=== subcollections ===');
-let wl = 0, cart = 0, bm = 0, missingSubs = 0;
+let wl = 0, cart = 0, bm = 0;
+const seedUserIds = new Set(Object.keys(JSON.parse(readFileSync(join(__dirname, 'data', 'users.json'), 'utf8'))));
+let seedUsersMissingSubs = 0, realUsersNoSubs = 0;
 for (const d of users.docs) {
+  let empty = 0;
   for (const [name, add] of [['wishlist_items', 'wl'], ['cart_items', 'cart'], ['bookmarks', 'bm']]) {
     const s = await d.ref.collection(name).get();
-    if (s.empty) missingSubs++; else s.size;
+    if (s.empty) empty++; else s.size;
     if (name === 'wishlist_items') wl += s.size;
     if (name === 'cart_items') cart += s.size;
     if (name === 'bookmarks') bm += s.size;
   }
+  if (empty === 0) continue;
+  // Seed users always get all three; a real account may have none yet.
+  if (seedUserIds.has(d.id)) seedUsersMissingSubs++;
+  else realUsersNoSubs++;
 }
-ok(missingSubs === 0, `every user has all 3 subcollections (${missingSubs} users missing one)`);
+ok(seedUsersMissingSubs === 0, `every seed user has all 3 subcollections (${seedUsersMissingSubs} incomplete)`);
 console.log(`  wishlist_items=${wl}  cart_items=${cart}  bookmarks=${bm}`);
+if (realUsersNoSubs) console.log(`  note: ${realUsersNoSubs} real account(s) have no subcollections yet - expected`);
 
 console.log('\n=== category vocabulary ===');
 const ALLOWED = new Set(['anime','donghua','manga','manhua','manhwa','comics','gaming','e-sports','music','movies','books']);

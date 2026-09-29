@@ -31,6 +31,15 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        // Feeds com.google.android.geo.API_KEY in AndroidManifest.xml.
+        //
+        // Read from local.properties so the key is not committed. The empty default
+        // is deliberate: the Maps SDK renders a blank tile rather than crashing when
+        // the value is absent, so a checkout without the key still builds and runs,
+        // and EventMapSection falls back to "Open in Google Maps".
+        manifestPlaceholders["GOOGLE_MAPS_API_KEY"] =
+            (project.findProperty("GOOGLE_MAPS_API_KEY") as String?) ?: ""
     }
 
     buildTypes {

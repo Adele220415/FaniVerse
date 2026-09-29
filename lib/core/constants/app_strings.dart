@@ -1,10 +1,10 @@
 class AppStrings {
   // App
-  static const String appName = 'Faniverse';
+  static const String appName = 'FaniVerse';
   
   // Auth
   static const String welcomeBack = 'Welcome back';
-  static const String loginSubtitle = 'Sign in to continue to Faniverse';
+  static const String loginSubtitle = 'Sign in to continue to FaniVerse';
   static const String createAccount = 'Create your account';
   static const String registerSubtitle = 'Join the fandom community';
   

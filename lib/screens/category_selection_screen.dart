@@ -3,6 +3,7 @@ import '../core/constants/app_strings.dart';
 import '../core/constants/app_colors.dart';
 import '../core/constants/categories.dart';
 import '../services/auth_service.dart';
+import '../widgets/category_art.dart';
 
 class CategorySelectionScreen extends StatefulWidget {
   final VoidCallback onSelectionComplete;
@@ -219,15 +220,14 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
         itemBuilder: (context, index) {
           final category = AppCategories.all[index];
           final isSelected = _selectedCategories.contains(category);
-          final icon = AppCategories.getIcon(category);
 
-          return _buildCategoryCard(category, icon, isSelected);
+          return _buildCategoryCard(category, isSelected);
         },
       ),
     );
   }
 
-  Widget _buildCategoryCard(String category, String icon, bool isSelected) {
+  Widget _buildCategoryCard(String category, bool isSelected) {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -240,7 +240,7 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
       },
       child: Container(
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.primary.withOpacity(0.2) : AppColors.surface,
+          color: isSelected ? AppColors.primaryTint : AppColors.surface,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: isSelected ? AppColors.primary : AppColors.border,
@@ -250,27 +250,21 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // The fandom's illustration rather than an emoji glyph.
+            CategoryArtView(category: category, size: 48, selected: isSelected),
+            const SizedBox(height: 10),
             Text(
-              icon,
-              style: const TextStyle(fontSize: 32),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              category,
+              AppCategories.label(category),
               style: TextStyle(
-                color: isSelected ? AppColors.primary : AppColors.textPrimary,
+                color: isSelected ? AppColors.primaryLight : AppColors.textPrimary,
                 fontSize: 14,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
               ),
               textAlign: TextAlign.center,
             ),
             if (isSelected) ...[
-              const SizedBox(height: 4),
-              const Icon(
-                Icons.check_circle,
-                color: AppColors.primary,
-                size: 16,
-              ),
+              const SizedBox(height: 6),
+              const Icon(Icons.check_circle, color: AppColors.primary, size: 16),
             ],
           ],
         ),
@@ -390,9 +384,10 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
       return;
     }
 
-    // Update categories
+    // Update categories. Normalise to the canonical lowercase vocabulary so
+    // arrayContains queries match seeded data.
     final result = await _authService.updateUserCategories(
-      _selectedCategories.toList(),
+      _selectedCategories.map(AppCategories.normalize).toList(),
     );
 
     setState(() => _isLoading = false);

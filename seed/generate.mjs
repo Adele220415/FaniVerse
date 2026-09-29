@@ -81,7 +81,11 @@ const CATEGORIES = [
   'anime', 'donghua', 'manga', 'manhua', 'manhwa', 'comics',
   'gaming', 'e-sports', 'music', 'movies', 'books',
 ];
-const ROLES =  ['reader', 'reader', 'writer', 'writer', 'writer', 'editor', 'moderator'];
+// The app has exactly two roles. Seeded accounts are all fans: the single
+// admin is provisioned separately by seed/grant-admin.mjs, which writes the
+// role with the Admin SDK and so bypasses these documents entirely.
+// Must match lib/core/constants/app_roles.dart.
+const ROLES = ['fan'];
 const STATUSES = ['ongoing', 'completed', 'hiatus', 'draft', 'upcoming'];
 const TYPES = ['video', 'audio', 'image', 'text', 'mixed'];
 const LANGUAGES = ['en', 'en', 'en', 'es', 'jp', 'fr', 'pt', 'ko', 'id'];

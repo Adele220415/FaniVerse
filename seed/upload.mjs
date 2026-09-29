@@ -57,7 +57,62 @@ const read = (f) => JSON.parse(readFileSync(join(DATA_DIR, f), 'utf8'));
 // --dry-run validates credentials, paths and payload shape, then writes
 // nothing. Useful before a first push to a live project.
 const DRY_RUN = process.argv.includes('--dry-run');
+// --wipe deletes every document in the seeded collections before writing.
+// Needed because set() only overwrites: if the generator produces fewer docs
+// than a previous run (the PRNG shifts whenever generation code changes), the
+// leftovers survive as orphans pointing at references that no longer exist.
+const WIPE = process.argv.includes('--wipe');
 let planned = 0;
+
+/**
+ * Delete many document references.
+ *
+ * listDocuments() returns paths without fetching document bodies, so listing a
+ * collection is one cheap RPC. bulkWriter() then handles batching and
+ * throttling internally. The original per-document deleteTree() needed a round
+ * trip per document and timed out on ~1000 documents.
+ */
+async function batchDelete(refs) {
+  if (!refs.length) return 0;
+  const writer = db.bulkWriter();
+  for (const r of refs) writer.delete(r);
+  await writer.close();
+  return refs.length;
+}
+
+/**
+ * Wipe everything this pipeline owns, including subcollections.
+ *
+ * Real (non-seed) user accounts are preserved: seed IDs are namespaced u_####.
+ */
+async function wipeAll(seedUserIds) {
+  console.log('\nWIPING (destructive)...');
+
+  // Subcollections first. Enumerate via each parent so we can skip real users.
+  const userRefs = (await db.collection('users').listDocuments())
+    .filter((r) => seedUserIds.has(r.id));
+  const communityRefs = await db.collection('communities').listDocuments();
+
+  const subRefs = [];
+  for (const s of ['wishlist_items', 'cart_items', 'bookmarks']) {
+    for (const u of userRefs) subRefs.push(...await u.collection(s).listDocuments());
+  }
+  for (const c of communityRefs) subRefs.push(...await c.collection('discussions').listDocuments());
+  console.log(`  subcollections: deleted ${await batchDelete(subRefs)}`);
+
+  for (const name of ['users', 'content', 'products', 'events', 'communities']) {
+    let refs = await db.collection(name).listDocuments();
+    let kept = 0;
+    if (name === 'users') {
+      const before = refs.length;
+      refs = refs.filter((r) => seedUserIds.has(r.id));
+      kept = before - refs.length;
+    }
+    console.log(`  ${name}: deleted ${await batchDelete(refs)}`);
+    if (kept) console.log(`  ${name}: kept ${kept} non-seed document(s)`);
+  }
+  console.log('');
+}
 
 /** Split a plain-object tree into scalar fields and nested subcollections. */
 function splitNode(node) {
@@ -146,6 +201,11 @@ async function main() {
   const existing = probe.map((c) => c.id);
   console.log(`Connected. Existing top-level collections: ${existing.length ? existing.join(', ') : '(none)'}\n`);
 
+  if (WIPE) {
+    const seedUserIds = new Set(Object.keys(read('users.json')));
+    await wipeAll(seedUserIds);
+  }
+
   const STEPS = [
     ['1/6', 'users', () => seedCollection('users', 'users.json')],
     ['2/6', 'users/*/wishlist_items + users/*/cart_items + users/*/bookmarks', async () => {
@@ -180,7 +240,6 @@ async function main() {
     console.log(`\nDry run complete - ${planned} documents would be written. Nothing was changed.`);
     return;
   }
-
   // Final sanity check: references must have resolved to real documents.
   const [u, p, e, c] = await Promise.all([
     db.collection('users').count().get(),

@@ -39,6 +39,23 @@ const REQUIRED = [
   'categories', 'role', 'isActive', 'createdAt', 'updatedAt', 'lastLoginAt',
 ];
 
+/** Canonical vocabulary. Must match AppCategories.all and CATEGORIES in
+ *  seed/generate.mjs - Firestore arrayContains is case-sensitive. */
+const CANON = new Set([
+  'anime', 'donghua', 'manga', 'manhua', 'manhwa', 'comics',
+  'gaming', 'e-sports', 'music', 'movies', 'books',
+]);
+
+/**
+ * Lowercase any category that is not already canonical. Earlier app builds
+ * stored Title Case ('Music'), which silently breaks arrayContains queries.
+ */
+const needsNormalise = (cats) =>
+  Array.isArray(cats) && cats.some((c) => typeof c === 'string' && c !== c.toLowerCase());
+
+const normalise = (cats) =>
+  Array.from(new Set(cats.map((c) => String(c).toLowerCase()).filter((c) => CANON.has(c))));
+
 /** Must match UserModel.deriveUsername. */
 const deriveUsername = (name, uid) => {
   const base = String(name ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
@@ -54,16 +71,19 @@ let alreadyComplete = 0;
 for (const doc of snapshot.docs) {
   const data = doc.data();
   const missing = REQUIRED.filter((f) => !(f in data));
-  if (!missing.length) { alreadyComplete++; continue; }
-
   const patch = {};
+
   for (const f of missing) {
     switch (f) {
       case 'uid': patch.uid = doc.id; break;
       case 'username': patch.username = deriveUsername(data.name, doc.id); break;
       case 'profileImage': patch.profileImage = `https://i.pravatar.cc/300?u=${doc.id}`; break;
       case 'bio': patch.bio = ''; break;
-      case 'role': patch.role = 'reader'; break;
+      // Only fills an ABSENT field, so an account already promoted to admin by
+      // seed/grant-admin.mjs is left alone. Legacy values from the old
+      // reader/writer/editor/moderator ladder are collapsed to `fan` further
+      // down, since those rungs no longer exist.
+      case 'role': patch.role = 'fan'; break;
       case 'isActive': patch.isActive = true; break;
       case 'categories': patch.categories = []; break;
       case 'createdAt': patch.createdAt = data.createdAt ?? new Date().toISOString(); break;
@@ -72,9 +92,30 @@ for (const doc of snapshot.docs) {
     }
   }
 
-  console.log(`${doc.id}`);
-  console.log(`  missing : ${missing.join(', ')}`);
-  console.log(`  patch   : ${Object.entries(patch).map(([k, v]) => `${k}=${JSON.stringify(v)}`).join(', ')}`);
+  // Normalise legacy Title Case categories even though the field is present.
+  if (needsNormalise(data.categories)) {
+    patch.categories = normalise(data.categories);
+  }
+
+  // Collapse the old reader/writer/editor/moderator ladder onto `fan`.
+  //
+  // This has to run even for a document that is otherwise full-shape, since
+  // those documents are the ones carrying a legacy role. `admin` is passed
+  // through untouched - it is the only value that still means something, and
+  // rewriting it would demote the real admin. The whitelist is deliberate: any
+  // unrecognised value becomes `fan`, so a corrupt role can never fail open.
+  if (typeof data.role === 'string' && data.role !== 'fan' && data.role !== 'admin') {
+    patch.role = 'fan';
+  }
+
+  if (!Object.keys(patch).length) { alreadyComplete++; continue; }
+
+  const catNote = patch.categories ? `  categories: ${JSON.stringify(data.categories)} -> ${JSON.stringify(patch.categories)}` : '';
+  console.log(`${doc.id}${catNote}`);
+  console.log(`  missing : ${missing.length ? missing.join(', ') : '(none)'}`);
+  if (Object.keys(patch).length) {
+    console.log(`  patch   : ${Object.entries(patch).map(([k, v]) => `${k}=${JSON.stringify(v)}`).join(', ')}`);
+  }
 
   if (WRITE) {
     await doc.ref.update(patch);

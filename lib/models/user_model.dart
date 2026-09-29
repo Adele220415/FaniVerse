@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../core/constants/app_roles.dart';
+
 /// Mirrors the Firestore `users` document shape.
 ///
 /// Every user - real or seeded - carries the same 12 fields so queries and UI
@@ -39,8 +41,18 @@ class UserModel {
 
   /// Defaults applied at registration so a new account is indistinguishable
   /// in shape from a seeded one.
-  static const String defaultRole = 'reader';
+  static const String defaultRole = AppRoles.fan;
   static const String defaultBio = '';
+
+  /// Whether this account has admin privileges.
+  ///
+  /// Derived from [role] on every read rather than cached, so a promotion or a
+  /// demotion takes effect the moment the document changes - there is no
+  /// in-memory copy that can go stale behind a revoked role.
+  bool get isAdmin => AppRoles.isAdmin(role);
+
+  /// Whether this account is an ordinary fan.
+  bool get isFan => !isAdmin;
 
   /// Builds the document for a freshly registered account.
   factory UserModel.forNewUser({
@@ -69,13 +81,18 @@ class UserModel {
 
   /// `first_last_0000` style handle. The uid suffix keeps it unique without a
   /// server round-trip for a lookup.
+  ///
+  /// [uid] is defensively clamped rather than assumed to be long: this runs
+  /// while parsing a document read from Firestore, and a short id there would
+  /// otherwise throw and take the whole user list down with it.
   static String deriveUsername(String name, String uid) {
     final base = name
         .toLowerCase()
         .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
         .replaceAll(RegExp(r'^_+|_+$'), '');
     final safe = base.isEmpty ? 'user' : base;
-    return '${safe}_${uid.substring(0, 4)}';
+    final suffix = uid.length <= 4 ? uid : uid.substring(0, 4);
+    return '${safe}_$suffix';
   }
 
   static String defaultProfileImage(String uid) => 'https://i.pravatar.cc/300?u=$uid';
@@ -109,7 +126,7 @@ class UserModel {
       categories: rawCategories is List
           ? rawCategories.map((e) => e.toString()).toList()
           : const [],
-      role: data['role'] as String? ?? defaultRole,
+      role: AppRoles.normalize(data['role'] as String?),
       isActive: data['isActive'] as bool? ?? true,
       createdAt: _parseTimestamp(data['createdAt']) ?? now,
       updatedAt: _parseTimestamp(data['updatedAt']) ?? _parseTimestamp(data['createdAt']) ?? now,
@@ -138,7 +155,32 @@ class UserModel {
 
   /// Mutable fields only. `uid`, `email` and `createdAt` are excluded:
   /// `uid` and `createdAt` are immutable, and email is owned by Firebase Auth.
+  ///
+  /// `role` and `isActive` are excluded too, and this is a security boundary
+  /// rather than tidiness. Firestore rules also pin both fields on update, so
+  /// a client sending them would have the *whole write* rejected - a profile
+  /// edit would fail with PERMISSION_DENIED and the user would see their
+  /// avatar change bounce back with no explanation. Stripping them here means
+  /// the ordinary edit path simply never touches them, and privilege can only
+  /// be changed by an admin through [toAdminJson].
   Map<String, dynamic> toUpdateJson() {
+    return {
+      'name': name,
+      'username': username,
+      'profileImage': profileImage,
+      'bio': bio,
+      'categories': categories,
+      'updatedAt': FieldValue.serverTimestamp(),
+    };
+  }
+
+  /// The privileged fields, for an admin editing someone else's account.
+  ///
+  /// Kept separate from [toUpdateJson] so it is obvious at the call site that a
+  /// privileged write is happening. It is a *full* document, not a patch, so it
+  /// pairs with `.set(..., {merge: true})`; note it deliberately does not
+  /// rewrite `uid`, `email` or `createdAt`.
+  Map<String, dynamic> toAdminJson() {
     return {
       'name': name,
       'username': username,

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="faniverse_main"
+        android:label="FaniVerse"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -30,6 +30,20 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- Google Maps SDK for Android.
+
+             The key is injected from android/app/local.properties (key GOOGLE_MAPS_API_KEY)
+             rather than committed here. google_maps_flutter reads the key from this
+             meta-data natively, so unlike the Dart-side --dart-define there is no way to
+             pass it at runtime - it has to exist in the manifest at build time.
+
+             Keep it in local.properties (gitignored) and restrict it in Google Cloud by
+             package name + signing SHA-1. An unrestricted key is an open billing
+             liability. See lib/core/constants/maps_config.dart. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${GOOGLE_MAPS_API_KEY}" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

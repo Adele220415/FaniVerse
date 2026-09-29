@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "verify:rules": "node tool/verify-rules.mjs"
+  },
   "dependencies": {
     "firebase-admin": "^14.5.0"
   }

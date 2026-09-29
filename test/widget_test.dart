@@ -1,30 +1,33 @@
-// This is a basic Flutter widget test.
+// The original file here was `flutter create`'s counter smoke test, which never
+// matched this app and failed on every run. It is kept as the place for
+// top-level widget tests; the wallpaper feature has its own file.
 //
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+// Anything that builds MyApp needs Firebase initialised first, which a widget
+// test cannot do, so this only covers widgets that stand alone.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:faniverse_main/main.dart';
+import 'package:faniverse_main/widgets/content_thumbnail.dart';
+import 'package:faniverse_main/models/content_item.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('ContentThumbnail renders a video badge for a video post', (
+    WidgetTester tester,
+  ) async {
+    final item = ContentItem(
+      id: 'c1',
+      title: 'A clip',
+      category: 'anime',
+      type: 'video',
+      videoUrl: 'https://example.com/clip.mp4',
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(body: SizedBox(width: 200, height: 200, child: ContentThumbnail(item: item))),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(ContentThumbnail), findsOneWidget);
   });
 }

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import '../core/result.dart';
+import '../core/constants/app_roles.dart';
 import '../models/user_model.dart';
 
 // Result class is now imported from core/result.dart to avoid duplication
@@ -115,6 +116,24 @@ class AuthService {
         password: password,
       );
 
+      // A deactivated account is signed out again immediately.
+      //
+      // Firebase Auth has no notion of a disabled user, so `isActive` is the
+      // only signal available, and it lives in Firestore. Enforcing it here -
+      // rather than only hiding the account in the admin UI - is what makes
+      // deactivation an actual moderation action instead of a label. The sign
+      // out happens before the check below so a rejected user never ends up in
+      // a half-authenticated state.
+      final active = await _isActive(_auth.currentUser!.uid);
+      if (active != true) {
+        await _auth.signOut();
+        return Result.error(
+          active == false
+              ? 'This account has been deactivated.'
+              : 'Could not verify this account. Please try again.',
+        );
+      }
+
       // Keep lastLoginAt current. A failure here must not fail the login, so
       // it is logged and swallowed.
       try {
@@ -202,6 +221,91 @@ class AuthService {
       return Result.error('Failed to fetch user data: ${e.toString()}');
     }
   }
+
+  // ---------------------------------------------------------------------------
+  // Role
+  // ---------------------------------------------------------------------------
+
+  /// Whether the account is allowed in. Returns null when the answer could not
+  /// be determined, which is deliberately distinct from `false`.
+  ///
+  /// The distinction matters at the call site: a Firestore failure must not be
+  /// reported to the user as "your account has been deactivated", which would
+  /// be both wrong and unactionable. Callers fail closed on null anyway -
+  /// refusing entry is the safer of the two mistakes - but they can say
+  /// something truthful about it.
+  Future<bool?> _isActive(String uid) async {
+    try {
+      final doc = await _firestore.collection('users').doc(uid).get();
+      // A document written before the field existed is treated as active.
+      // Backfilling it to false would lock out every legacy account.
+      return doc.data()?['isActive'] as bool? ?? true;
+    } catch (e) {
+      debugPrint('Could not read isActive for $uid: $e');
+      return null;
+    }
+  }
+
+  /// The signed-in account's role, or [AppRoles.fan] when signed out.
+  ///
+  /// The value comes from the user's own Firestore document, which only the
+  /// `seed/grant-admin.mjs` script and an authenticated admin can write - the
+  /// rules pin `role` on update, so a client cannot promote itself. Reading it
+  /// from the document rather than inferring it from the email address matters:
+  /// the email is public, so treating it as proof of admin would mean anyone
+  /// who learns it is one `update` away from full write access.
+  ///
+  /// Returns [AppRoles.fan] for a signed-out caller or on a read failure. A
+  /// failed lookup must not grant privilege, so this fails closed.
+  Future<String> getCurrentUserRole() async {
+    final uid = _auth.currentUser?.uid;
+    if (uid == null) return AppRoles.fan;
+
+    try {
+      final doc = await _firestore.collection('users').doc(uid).get();
+      if (!doc.exists) return AppRoles.fan;
+
+      final role = doc.data()?['role'] as String?;
+      return AppRoles.normalize(role);
+    } catch (e) {
+      debugPrint('Could not read role for $uid: $e');
+      return AppRoles.fan;
+    }
+  }
+
+  /// Live role for the signed-in account.
+  ///
+  /// Emits [AppRoles.fan] when signed out so a caller can drive UI straight
+  /// from the stream without pairing it against the auth state. Useful for
+  /// hiding admin-only controls the moment a role changes, rather than at the
+  /// next app launch.
+  Stream<String> watchCurrentUserRole() {
+    final uid = _auth.currentUser?.uid;
+    if (uid == null) return Stream.value(AppRoles.fan);
+
+    return _firestore
+        .collection('users')
+        .doc(uid)
+        .snapshots()
+        .map((snap) =>
+            AppRoles.normalize(snap.data()?['role'] as String?))
+        .handleError((Object error) {
+      debugPrint('Role stream failed for $uid: $error');
+    });
+  }
+
+  /// The signed-in account's full record, or null when signed out.
+  Future<UserModel?> getCurrentUserModel() async {
+    final uid = _auth.currentUser?.uid;
+    if (uid == null) return null;
+
+    final result = await getUserData(uid);
+    return result.data;
+  }
+
+  /// Whether the signed-in account currently holds the admin role.
+  Future<bool> isCurrentUserAdmin() async =>
+      AppRoles.isAdmin(await getCurrentUserRole());
 
   // Check if user has selected categories
   Future<Result<bool>> hasUserSelectedCategories() async {

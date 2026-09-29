@@ -1,0 +1,24 @@
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"
+             width="400" height="400" role="img">
+          <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2A2348"/>
+    <stop offset="100%" stop-color="#121214"/>
+  </linearGradient>
+</defs>
+<circle cx="200" cy="200" r="196" fill="url(#bg)"/>
+<circle cx="200" cy="200" r="192" fill="none" stroke="#7C5CFF"
+        stroke-width="4" stroke-opacity="0.35"/>
+
+<rect x="72" y="104" width="256" height="200" rx="14" fill="{PRIMARY}"/>
+<rect x="94" y="126" width="102" height="76" rx="8" fill="{DEEP}"/>
+<rect x="208" y="126" width="98" height="76" rx="8" fill="{DEEP}"/>
+<rect x="94" y="214" width="212" height="14" rx="7" fill="{LIGHT}"/>
+<rect x="94" y="240" width="150" height="14" rx="7" fill="{LIGHT}"/>
+<rect x="94" y="266" width="180" height="14" rx="7" fill="{LIGHT}"/>
+<g fill="{LIGHT}">
+  <circle cx="112" cy="146" r="4"/><circle cx="128" cy="146" r="4"/><circle cx="144" cy="146" r="4"/>
+  <circle cx="160" cy="164" r="4"/><circle cx="176" cy="164" r="4"/><circle cx="192" cy="164" r="4"/>
+</g>
+<path d="M300 232l34 20-34 20z" fill="{LIGHT}"/>
+        </svg>

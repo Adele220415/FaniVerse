@@ -16,6 +16,31 @@ service cloud.firestore {
       return /databases/$(database)/documents/users/$(request.auth.uid);
     }
 
+    // Whether the caller holds the admin role.
+    //
+    // Read from the caller's own user document rather than from a custom claim
+    // or a hardcoded email. The document can only acquire `role: 'admin'` via
+    // seed/grant-admin.mjs, because every client-side update below is pinned to
+    // the current value - so a user cannot write their way to this. A custom
+    // claim would avoid the extra read, but it needs a token refresh to take
+    // effect, so a role changed in the console would not apply until the user
+    // relaunched.
+    function isAdmin() {
+      return isSignedIn()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Whether an admin may change this document's role/isActive.
+    //
+    // False for the admin account itself. There is exactly one admin by design,
+    // so allowing it to be demoted or deactivated from inside the app would
+    // strand the installation with no way to promote a replacement - recovery
+    // would need a console edit. AdminService enforces the same rule, but a
+    // client that skipped the service would otherwise succeed here.
+    function isAdminRoleLocked(existing) {
+      return existing.data.role != 'admin';
+    }
+
     // ---------- users ----------
     match /users/{userId} {
 
@@ -23,24 +48,84 @@ service cloud.firestore {
       // content.author can be resolved to a display name when rendering.
       allow read: if isSignedIn();
 
+      // `role` and `isActive` are pinned on create as well as update.
+      //
+      // Registration writes the document itself, so a create rule that only
+      // checked the uid would let any client register with `role: 'admin'` and
+      // be an admin from the first sign-in - the update guard would never get
+      // a chance to run. The only way to mint an admin is
+      // seed/grant-admin.mjs, which uses the Admin SDK and bypasses these rules
+      // entirely.
       allow create: if isOwner(userId)
-        && request.resource.data.uid == userId;
+        && request.resource.data.uid == userId
+        && request.resource.data.role != 'admin'
+        && request.resource.data.isActive == true;
 
       // Guard against privilege escalation: a user must not be able to grant
       // themselves a higher role or reactivate a disabled account.
-      allow update: if isOwner(userId)
-        && request.resource.data.uid == resource.data.uid
-        && request.resource.data.role == resource.data.role
-        && request.resource.data.isActive == resource.data.isActive
-        && request.resource.data.createdAt == resource.data.createdAt;
+      //
+      // The admin branch is an OR, not an exception layered on top, so a
+      // non-admin's own rule is unchanged. An admin can set `isActive` on any
+      // account, but the admin account is pinned in both directions:
+      // `isAdminRoleLocked(resource)` refuses to touch the existing admin, and
+      // the `role != 'admin'` clause refuses to mint a second one. Either alone
+      // would leave the installation with two admins, or with none.
+      allow update: if (isOwner(userId)
+          && request.resource.data.uid == resource.data.uid
+          && request.resource.data.role == resource.data.role
+          && request.resource.data.isActive == resource.data.isActive
+          && request.resource.data.createdAt == resource.data.createdAt)
+        || (isAdmin()
+          && isAdminRoleLocked(resource)
+          && request.resource.data.role != 'admin'
+          && request.resource.data.uid == resource.data.uid
+          && request.resource.data.email == resource.data.email
+          && request.resource.data.createdAt == resource.data.createdAt);
 
-      allow delete: if isOwner(userId);
+      // A user deletes only their own account, and never the admin one.
+      allow delete: if isOwner(userId) && resource.data.role != 'admin';
+
+      // Notifications arrive from OTHER users (someone liked your post), so
+      // the read/delete/update rights are the recipient's, but the create right
+      // belongs to the actor who performed the action.
+      match /notifications/{notificationId} {
+
+        allow read: if isOwner(userId);
+        allow delete: if isOwner(userId);
+
+        // The recipient may mark their own notifications read. This has to be
+        // narrowly scoped: an unrestricted `allow update` here would also let
+        // them rewrite the actor, which is what the check below protects.
+        allow update: if isOwner(userId)
+          && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['read', 'readAt']);
+
+        // The actor may only write a notification that names them as the one
+        // who caused it. Without this check any signed-in user could forge
+        // notifications into someone else's inbox.
+        //
+        // This covers updates as well as creates, and it has to: the document
+        // id is derived from (type, actor, target), so a save that is undone
+        // and then redone writes over a document that already exists. That
+        // write is an `update` to Firestore, not a `create`, and under a
+        // create-only rule it was denied - which made the second save of a
+        // post fail with PERMISSION_DENIED.
+        allow create, update: if isSignedIn()
+          && request.resource.data.actorUid == request.auth.uid;
+      }
 
       // Per-user subcollections: wishlist_items, cart_items, bookmarks.
       // The wildcard covers any subcollection under this user only.
       match /{subcollection}/{docId} {
         allow read, write: if isOwner(userId);
       }
+    }
+
+    // Fields that any signed-in viewer is allowed to change. Engagement
+    // counters are the only mutable state on a post that is not the author's.
+    function isEngagementOnly() {
+      return request.resource.data.diff(resource.data).affectedKeys()
+        .hasOnly(['likes', 'views', 'comments', 'saved', 'updatedAt']);
     }
 
     // ---------- content ----------
@@ -52,13 +137,170 @@ service cloud.firestore {
       allow create: if isSignedIn()
         && request.resource.data.author == selfRef();
 
-      // Authors may edit or delete their own posts, but may not reassign
+      // Authors may edit their own posts, but may not reassign
       // authorship to another user.
-      allow update: if isSignedIn()
-        && resource.data.author == selfRef()
-        && request.resource.data.author == resource.data.author;
+      //
+      // Separately, ANY signed-in user may adjust the engagement counters.
+      // Without this, a like from a second device fails: the author-only
+      // branch below would reject it, and EngagementService.toggleLike would
+      // surface as a generic permission error.
+      //
+      // An admin may edit or remove any post, whoever wrote it. The author
+      // reference is still pinned, so moderation cannot reassign a post to
+      // another account.
+      allow update: if isSignedIn() && (
+        (resource.data.author == selfRef()
+          && request.resource.data.author == resource.data.author)
+        || isEngagementOnly()
+        || (isAdmin() && request.resource.data.author == resource.data.author)
+      );
 
-      allow delete: if isSignedIn() && resource.data.author == selfRef();
+      allow delete: if isAdmin()
+        || (isSignedIn() && resource.data.author == selfRef());
+    }
+
+    // ---------- products & events ----------
+    //
+    // Both collections hold listings a user has created for their own profile.
+    // Ownership is carried by a plain `sellerId` / `organizerId` string rather
+    // than a DocumentReference, because that is the shape the seeded documents
+    // already use and the shop already filters on.
+
+    match /products/{productId} {
+      // Readable by any signed-in user. This covers the seeded documents too,
+      // which have no sellerId at all - they are the shop's whole inventory.
+      allow read: if isSignedIn();
+
+      // A listing can only be created as yourself. The check is on the uid in
+      // the payload, not on who asked, so a forged sellerId is rejected.
+      allow create: if isSignedIn()
+        && request.resource.data.sellerId == request.auth.uid;
+
+      // Owners may edit or withdraw their own listings, but may not hand one
+      // to another user by rewriting the sellerId. An admin may moderate any
+      // listing, still without reassigning the seller.
+      allow update: if isSignedIn() && (
+        (resource.data.sellerId == request.auth.uid
+          && request.resource.data.sellerId == resource.data.sellerId)
+        || (isAdmin() && request.resource.data.sellerId == resource.data.sellerId)
+      );
+
+      // The admin branch also covers the seeded products, which carry no
+      // sellerId at all - so the shop's whole inventory is reachable by
+      // moderation, which the owner-only rule could never do.
+      allow delete: if isAdmin()
+        || (isSignedIn() && resource.data.sellerId == request.auth.uid);
+    }
+
+    match /events/{eventId} {
+      allow read: if isSignedIn();
+
+      allow create: if isSignedIn()
+        && request.resource.data.organizerId == request.auth.uid;
+
+      allow update: if isSignedIn() && (
+        (resource.data.organizerId == request.auth.uid
+          && request.resource.data.organizerId == resource.data.organizerId)
+        || (isAdmin() && request.resource.data.organizerId == resource.data.organizerId)
+      );
+
+      allow delete: if isAdmin()
+        || (isSignedIn() && resource.data.organizerId == request.auth.uid);
+    }
+
+    // ---------- communities ----------
+    //
+    // This block was missing entirely, which meant the whole community feature
+    // was denied: Firestore rules are deny-by-default, so every read of
+    // `communities` and every write to `communities/*/discussions` returned
+    // PERMISSION_DENIED. The screens were not broken, there was simply no
+    // data they were allowed to see.
+    //
+    // Note the membership edge lives at `users/{uid}/communities/{communityId}`
+    // and is already covered by the per-user subcollection wildcard above, so
+    // it needs nothing here.
+
+    // Whether the caller created the given community document.
+    //
+    // `createdBy` has two shapes on purpose. The seeded communities store a
+    // DocumentReference to `users/{uid}` (see seed/generate.mjs, which asserts
+    // the ref form), while `CommunityService.createCommunity` writes a bare uid
+    // string. Both are accepted, because a single-shape check would lock the
+    // seeded 25 communities out of their own creator's ownership.
+    function isCommunityCreator(existing) {
+      return existing.data.createdBy is string
+        ? existing.data.createdBy == request.auth.uid
+        : existing.data.createdBy == selfRef();
+    }
+
+    match /communities/{communityId} {
+
+      // Any signed-in user can browse. The community list is the app's
+      // discovery surface, and gating reads on membership would mean you can
+      // only find a community by already being in it.
+      allow read: if isSignedIn();
+
+      // Created as yourself, and the member count is pinned to 1 because
+      // `createCommunity` writes the creator in as the first member. Without
+      // that pin any client could seed a community claiming 10,000 members.
+      allow create: if isSignedIn()
+        && (request.resource.data.createdBy is string
+          ? request.resource.data.createdBy == request.auth.uid
+          : request.resource.data.createdBy == selfRef())
+        && request.resource.data.memberCount == 1;
+
+      // Two distinct rights, because the app needs both.
+      //
+      // Any signed-in user may change `memberCount` - joining a community is a
+      // write to this document, done by someone who is emphatically not its
+      // creator. So the counter is carved out with the same `hasOnly` diff
+      // check used for engagement counters on `content`, and the creator's
+      // branch is what governs the actual community content.
+      allow update: if isSignedIn() && (
+        (isCommunityCreator(resource)
+          && request.resource.data.createdBy == resource.data.createdBy)
+        || request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['memberCount', 'updatedAt'])
+        || (isAdmin() && request.resource.data.createdBy == resource.data.createdBy)
+      );
+
+      allow delete: if isAdmin() || (isSignedIn() && isCommunityCreator(resource));
+
+      // Discussions inside a community. Separate from `content` because these
+      // belong to a space rather than the main feed.
+      match /discussions/{postId} {
+
+        allow read: if isSignedIn();
+
+        // The author is recorded as a plain uid, so the check is a direct
+        // string comparison - no reference form to accommodate here.
+        allow create: if isSignedIn()
+          && request.resource.data.authorId == request.auth.uid;
+
+        // The author may edit their own post and may not reassign it, and any
+        // signed-in user may adjust the like counter - see the note on
+        // `memberCount` above for why that carve-out is necessary.
+        allow update: if isSignedIn() && (
+          (resource.data.authorId == request.auth.uid
+            && request.resource.data.authorId == resource.data.authorId)
+          || request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['likesCount', 'commentsCount', 'updatedAt'])
+        );
+
+        allow delete: if isAdmin()
+          || (isSignedIn() && resource.data.authorId == request.auth.uid);
+      }
+    }
+
+    // ---------- categories ----------
+    //
+    // Categories are the app's vocabulary rather than user content, so the
+    // write is admin-only. The collection is expected to be small and mostly
+    // empty: the built-in categories are compiled in as AppCategories.all and
+    // merged on read.
+    match /categories/{categoryId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
     }
   }
 }

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520"
+     width="800" height="520" role="img">
+  <defs>
+    <linearGradient id="glow3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#8B6FFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="400" cy="250" r="230" fill="url(#glow3)"/>
+
+  <!-- Product card -->
+  <rect x="150" y="116" width="250" height="280" rx="22" fill="#2A2348" fill-opacity="1.0"/>
+  <rect x="172" y="140" width="206" height="140" rx="16" fill="#7C5CFF" fill-opacity="1.0"/>
+  <path d="M232 244l34-44 30 34 24-26 36 36z" fill="#8B6FFF"/>
+  <circle cx="220" cy="178" r="18" fill="#8B6FFF"/>
+  <rect x="172" y="300" width="150" height="14" rx="7" fill="#8D8C92" fill-opacity="0.6"/>
+  <rect x="172" y="326" width="96" height="20" rx="10" fill="#3DD68C" fill-opacity="1.0"/>
+  <rect x="172" y="356" width="70" height="12" rx="6" fill="#8D8C92" fill-opacity="0.35"/>
+  <circle cx="188" cy="366" r="4" fill="#121214"/>
+  <circle cx="200" cy="366" r="4" fill="#121214"/>
+  <circle cx="212" cy="366" r="4" fill="#121214"/>
+
+  <!-- Add-to-cart button -->
+  <rect x="152" y="348" width="120" height="34" rx="17" fill="#7C5CFF" fill-opacity="1.0"/>
+  <path d="M182 362v10M177 367h10" stroke="#121214" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Saved / offline badge -->
+  <rect x="430" y="100" width="176" height="60" rx="18" fill="#23232A" fill-opacity="1.0"/>
+  <path d="M462 118h20c6 0 10 4 10 10v18c0 6-4 10-10 10h-20c-6 0-10-4-10-10v-18c0-6 4-10 10-10z"
+        fill="#3DD68C"/>
+  <rect x="504" y="124" width="84" height="12" rx="6" fill="#8D8C92" fill-opacity="0.6"/>
+
+  <!-- AI chat bubble -->
+  <rect x="360" y="196" width="300" height="128" rx="24" fill="#2A2348" fill-opacity="1.0"/>
+  <path d="M420 324l-8 40 48-40z" fill="#2A2348"/>
+  <rect x="392" y="228" width="200" height="16" rx="8" fill="#8B6FFF" fill-opacity="1.0"/>
+  <rect x="392" y="258" width="236" height="12" rx="6" fill="#8D8C92" fill-opacity="0.45"/>
+  <rect x="392" y="282" width="160" height="12" rx="6" fill="#8D8C92" fill-opacity="0.3"/>
+
+  <!-- Sparkles, the AI cue -->
+  <path d="M330 132l6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="#8B6FFF"/>
+  <path d="M660 250l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#7C5CFF"/>
+  <path d="M690 150l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#8B6FFF"
+        fill-opacity="0.7"/>
+</svg>

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../core/constants/app_strings.dart';
 import '../core/constants/app_colors.dart';
 import '../services/auth_service.dart';
+import '../widgets/greeting.dart';
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback onLoginSuccess;
@@ -50,7 +51,9 @@ class _LoginScreenState extends State<LoginScreen> {
       password: _passwordController.text,
     );
 
-    setState(() => _isLoading = false);
+    if (mounted) {
+      setState(() => _isLoading = false);
+    }
 
     if (result.isSuccess && mounted) {
       // Navigate using the callback - the AuthWrapper will handle the routing
@@ -86,14 +89,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Logo/Icon
                   const Icon(
                     Icons.festival_rounded,
-                    size: 80,
+                    size: 64,
                     color: AppColors.primary,
                   ),
-                  const SizedBox(height: 24),
-                  
+                  const SizedBox(height: 20),
+
                   // Title
                   Text(
                     AppStrings.appName,
@@ -104,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
-                  
+
                   // Subtitle
                   Text(
                     AppStrings.loginSubtitle,
@@ -113,7 +115,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 48),
+
+                  // The time-of-day greeting lives here, once, at the point of
+                  // arrival. It used to sit above the username on the Home
+                  // header, where it repeated on every single feed visit.
+                  const SizedBox(height: 28),
+                  const Greeting(),
+
+                  const SizedBox(height: 28),
 
                   // Email Field
                   TextFormField(

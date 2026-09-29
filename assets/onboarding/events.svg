@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520"
+     width="800" height="520" role="img">
+  <defs>
+    <linearGradient id="glow2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5A5A" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FF5A5A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="400" cy="250" r="230" fill="url(#glow2)"/>
+
+  <!-- Calendar body -->
+  <rect x="206" y="108" width="388" height="304" rx="22" fill="#2A2348" fill-opacity="1.0"/>
+  <rect x="206" y="108" width="388" height="62" rx="22" fill="#7C5CFF" fill-opacity="1.0"/>
+  <rect x="206" y="146" width="388" height="24" fill="#7C5CFF"/>
+
+  <!-- Binder rings -->
+  <rect x="256" y="88" width="16" height="46" rx="8" fill="#8B6FFF"/>
+  <rect x="392" y="88" width="16" height="46" rx="8" fill="#8B6FFF"/>
+  <rect x="528" y="88" width="16" height="46" rx="8" fill="#8B6FFF"/>
+
+  <!-- Grid of days -->
+  <g fill="#8D8C92" fill-opacity="0.28">
+    <rect x="236" y="196" width="34" height="30" rx="8"/>
+    <rect x="284" y="196" width="34" height="30" rx="8"/>
+    <rect x="332" y="196" width="34" height="30" rx="8"/>
+    <rect x="380" y="196" width="34" height="30" rx="8"/>
+    <rect x="236" y="240" width="34" height="30" rx="8"/>
+    <rect x="284" y="240" width="34" height="30" rx="8"/>
+    <rect x="332" y="240" width="34" height="30" rx="8"/>
+    <rect x="380" y="240" width="34" height="30" rx="8"/>
+    <rect x="236" y="284" width="34" height="30" rx="8"/>
+    <rect x="284" y="284" width="34" height="30" rx="8"/>
+  </g>
+
+  <!-- Marked days -->
+  <rect x="332" y="196" width="34" height="30" rx="8" fill="#FF5A5A" fill-opacity="1.0"/>
+  <rect x="236" y="284" width="34" height="30" rx="8" fill="#3DD68C" fill-opacity="1.0"/>
+  <rect x="428" y="196" width="34" height="30" rx="8" fill="#7C5CFF" fill-opacity="1.0"/>
+  <rect x="476" y="240" width="34" height="30" rx="8" fill="#7C5CFF" fill-opacity="1.0"/>
+  <path d="M340 211l6 7 12-14" stroke="#121214" stroke-width="5" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M244 299l6 7 12-14" stroke="#121214" stroke-width="5" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Event card pulled out of the calendar -->
+  <rect x="452" y="316" width="196" height="76" rx="16" fill="#23232A" fill-opacity="1.0"/>
+  <rect x="452" y="316" width="6" height="76" rx="3" fill="#7C5CFF"/>
+  <rect x="474" y="336" width="100" height="12" rx="6" fill="#8D8C92" fill-opacity="0.7"/>
+  <rect x="474" y="358" width="66" height="10" rx="5" fill="#8D8C92" fill-opacity="0.4"/>
+
+  <!-- Location pin -->
+  <path d="M540 196a22 22 0 1 0-44 0c0 20 44 46 44 46s44-26 44-46a22 22 0 0 0-22-22z"
+        fill="#FF5A5A"/>
+  <circle cx="518" cy="196" r="9" fill="#121214"/>
+</svg>
